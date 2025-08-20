@@ -1,0 +1,15 @@
+@mixin displayCenter ($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.header_menu {
+  @include displayCenter(space-between, center);
+  width: 100%;
+  .header_menu_section{
+    @include displayCenter(space-between, center);
+    width: 100%;
+    max-width: 144px;
+  }
+}
