@@ -16,13 +16,13 @@ const HeaderMenu = () => {
 
   return (
     <article className="header_menu">
-      <section className={`header_menu_items ${isOpen ? "close" : "open"}`}>
+      <section className={`header_menu_items ${isOpen ? "open" : "close"}`}>
         <Search />
         <Navigation />
         <HeaderItems />
       </section>
       <div className="menu_btn" onClick={toggleMenu}>
-        {isOpen ? <RxHamburgerMenu /> : <IoCloseOutline />}
+        {isOpen ? <IoCloseOutline /> : <RxHamburgerMenu />}
       </div>
     </article>
   );

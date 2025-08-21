@@ -19,7 +19,6 @@ const Navigation = () => {
               className={({ isActive }) =>
                 `${item.className} ${isActive ? "active" : ""}`
               }
-              end={item.path === "/"}
             >
               {item.label}
             </NavLink>
