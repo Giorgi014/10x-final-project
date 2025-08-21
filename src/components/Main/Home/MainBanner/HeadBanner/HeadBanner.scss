@@ -36,6 +36,7 @@
     @include displayCenter(space-between, center);
     width: 82%;
     max-width: 1620px;
+    gap: 16px;
     .product_info {
       .title {
         font-family: "Inter_semibold";
@@ -45,7 +46,7 @@
       }
       .product_name {
         font-family: "Inter_thin";
-        font-size: 96px;
+        font-size: clamp(72px, 6vw, 96px);
         color: var(--white);
         margin: 0px;
         & span {
@@ -58,6 +59,9 @@
         color: var(--gray_text);
         margin: 24px 0px;
       }
+    }
+    .banner_img{
+        width: clamp(326px, 34vw, 406px);
     }
   }
 }

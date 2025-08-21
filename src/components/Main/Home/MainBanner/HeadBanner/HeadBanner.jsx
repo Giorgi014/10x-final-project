@@ -13,7 +13,9 @@ const HeadBanner = () => {
           <p className="description">
             Created to change everything for the better. For everyone
           </p>
-          <Button variant="shop"><span>Shop Now</span></Button>
+          <Button variant="shop">
+            <span>Shop Now</span>
+          </Button>
         </div>
         <img src={Banner_img} alt="iphone 14 pro" className="banner_img" />
       </section>
