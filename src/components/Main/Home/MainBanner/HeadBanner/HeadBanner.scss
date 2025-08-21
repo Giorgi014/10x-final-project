@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../../../assets/fonts/static/Inter_18pt-Medium.ttf)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Inter_semibold";
+  src: url(../../../../../assets/fonts/static/Inter_18pt-SemiBold.ttf)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Inter_thin";
+  src: url(../../../../../assets/fonts/static/Inter_18pt-Thin.ttf)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../../../assets/fonts/static/Inter_18pt-Medium.ttf)
+    format("woff2");
+}
+
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
@@ -8,4 +32,32 @@
   @include displayCenter(center, center);
   width: 100%;
   background-color: #211c24;
+  .banner_section {
+    @include displayCenter(space-between, center);
+    width: 82%;
+    max-width: 1620px;
+    .product_info {
+      .title {
+        font-family: "Inter_semibold";
+        color: var(--gray);
+        font-size: 25px;
+        margin-bottom: 24px;
+      }
+      .product_name {
+        font-family: "Inter_thin";
+        font-size: 96px;
+        color: var(--white);
+        margin: 0px;
+        & span {
+          font-family: "Inter_semibold";
+        }
+      }
+      .description {
+        font-family: "Inter_medium";
+        font-size: 18px;
+        color: var(--gray_text);
+        margin: 24px 0px;
+      }
+    }
+  }
 }

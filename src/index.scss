@@ -1,13 +1,21 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(./assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
+}
+
 body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: "Inter_medium";
 }
 
 :root {
   --black_text_color: #000000;
   --gray_text_color: rgb(179, 179, 179);
   --white_bg: #f5f5f5;
+  --white: #ffffff;
   --gray_text: #909090;
+  --gray: rgb(122,119,124);
 }

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
+}
+
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
@@ -18,6 +23,7 @@
         text-decoration: none;
         color: var(--gray_text_color);
         font-size: 16px;
+        font-family: "Inter_medium";
         cursor: pointer;
         transition: color 0.2s ease-in-out;
         &:hover {
