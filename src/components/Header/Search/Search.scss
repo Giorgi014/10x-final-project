@@ -1,1 +1,39 @@
-// clear
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.search {
+  @include displayCenter(center, center);
+  width: 70%;
+  max-width: 372px;
+  position: relative;
+  border-radius: 8px;
+  .search_input {
+    width: 100%;
+    padding: 16px 16px 16px 40px;
+    border: none;
+    outline: none;
+    background-color: var(--white_bg);
+    border-radius: 8px;
+  }
+  .search_icon {
+    position: absolute;
+    left: 16px;
+    cursor: pointer;
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1025px) {
+  .search {
+    width: 100%;
+    max-width: none;
+    border-radius: 0px;
+    margin-top: 70px;
+    .search_input {
+      border-radius: 0px;
+    }
+  }
+}

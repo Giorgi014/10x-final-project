@@ -1,20 +1,29 @@
+import HeaderItems from "../HeaderItems/HeaderItems";
 import Navigation from "../Navigation/Navigation";
 import { Search } from "../Search/Search";
-import { IoIosHeartEmpty } from "react-icons/io";
-import { IoCartOutline } from "react-icons/io5";
-import { FiUser } from "react-icons/fi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoCloseOutline } from "react-icons/io5";
+import { useState } from "react";
 import "./HeaderMenu.scss";
 
 const HeaderMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    console.log("clicked");
+  };
+
   return (
     <article className="header_menu">
-      <Search />
-      <Navigation />
-      <section className="header_menu_section">
-        <IoIosHeartEmpty />
-        <IoCartOutline />
-        <FiUser />
+      <section className={`header_menu_items ${isOpen ? "close" : "open"}`}>
+        <Search />
+        <Navigation />
+        <HeaderItems />
       </section>
+      <div className="menu_btn" onClick={toggleMenu}>
+        {isOpen ? <RxHamburgerMenu /> : <IoCloseOutline />}
+      </div>
     </article>
   );
 };

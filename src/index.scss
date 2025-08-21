@@ -1,10 +1,12 @@
-body{
+body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-:root{
+:root {
   --black_text_color: #000000;
-  --gray_text_color: rgb(179,179,179);
+  --gray_text_color: rgb(179, 179, 179);
+  --white_bg: #f5f5f5;
 }

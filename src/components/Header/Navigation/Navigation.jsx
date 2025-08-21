@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navigation.scss";
 
 const navigate = [
@@ -14,7 +14,15 @@ const Navigation = () => {
       <ul>
         {navigate.map((item) => (
           <li key={item.id}>
-            <Link to={item.path}>{item.label}</Link>
+            <NavLink
+              to={item.path}
+              className={({ isActive }) =>
+                `${item.className} ${isActive ? "active" : ""}`
+              }
+              end={item.path === "/"}
+            >
+              {item.label}
+            </NavLink>
           </li>
         ))}
       </ul>

@@ -1,0 +1,42 @@
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+.header_items {
+  @include displayCenter(space-between, center);
+  gap: 5px;
+  width: 30%;
+  max-width: 144px;
+  .header_icon {
+    font-size: 20px;
+  }
+  .favorites_cont,
+  .cart_cont,
+  .user_cont {
+    @include displayCenter(center, center);
+    gap: 5px;
+    cursor: pointer;
+    .icons {
+      display: none;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1025px) {
+  .header_items {
+    @include displayCenter(flex-start, flex-start);
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 16px;
+    .favorites_cont,
+    .cart_cont,
+    .user_cont {
+      .icons {
+        display: flex;
+      }
+    }
+  }
+}

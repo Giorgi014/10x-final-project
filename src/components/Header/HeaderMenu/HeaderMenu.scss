@@ -1,4 +1,4 @@
-@mixin displayCenter ($justify, $align) {
+@mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -7,9 +7,60 @@
 .header_menu {
   @include displayCenter(space-between, center);
   width: 100%;
-  .header_menu_section{
+  .header_menu_items {
     @include displayCenter(space-between, center);
+    gap: 52.2px;
     width: 100%;
-    max-width: 144px;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .menu_btn {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1025px) {
+  .header_menu {
+    .header_menu_items {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      background-color: white;
+      z-index: 98;
+      flex-direction: column;
+      overflow: hidden;
+      &.open {
+        @include displayCenter(flex-start, flex-start);
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      &.close {
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .menu_btn {
+      display: flex;
+      z-index: 99;
+      position: absolute;
+      right: 16px;
+    }
   }
 }
