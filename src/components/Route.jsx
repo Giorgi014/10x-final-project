@@ -1,7 +1,7 @@
 // Components
 
 import Header from "./Header/Header";
-import Home from "./Main/Home";
+import Home from "./Main/Home/Home";
 import About from "./Main/About/About";
 import ContactUs from "./Main/ContactUs/ContactUs";
 import Blog from "./Main/Blog/Blog";

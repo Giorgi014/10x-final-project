@@ -1,0 +1,11 @@
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.head_banner_container {
+  @include displayCenter(center, center);
+  width: 100%;
+  background-color: #211c24;
+}

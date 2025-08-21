@@ -1,0 +1,10 @@
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.home_container{
+  width: 100%;
+  box-sizing: border-box;
+}
