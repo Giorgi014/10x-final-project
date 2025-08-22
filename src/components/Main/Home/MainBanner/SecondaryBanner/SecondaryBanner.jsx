@@ -3,7 +3,7 @@ import {
   Airpod,
   Applervision,
   Macbookair,
-} from "../../../../Images";
+} from "../../../../RoutImages";
 import { Button } from "../../../../Route";
 import "./SecondaryBanner.scss";
 
