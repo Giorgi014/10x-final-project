@@ -1,5 +1,104 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../../../assets/fonts/static/Inter_18pt-Medium.ttf)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Inter_thin";
+  src: url(../../../../../assets/fonts/static/Inter_18pt-Thin.ttf)
+    format("woff2");
+}
+
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+}
+
+.secondary_banner_container {
+  @include displayCenter(space-between, center);
+  width: 100%;
+  max-width: 1920px;
+  .left_section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "first first"
+      "second third";
+    > :nth-child(1) {
+      grid-area: first;
+    }
+    > :nth-child(2) {
+      grid-area: second;
+    }
+    > :nth-child(3) {
+      grid-area: third;
+    }
+    .left {
+      @include displayCenter(flex-start, center);
+      position: relative;
+      .playstation_img {
+        height: 100%;
+      }
+      .product_name {
+        margin: 0px 48px;
+        h3.playstation_img {
+          font-size: 49px;
+          font-family: "Inter_medium";
+          color: var(--black_text_color);
+        }
+        h3.airpod_img {
+          font-size: 29px;
+          font-family: "Inter_thin";
+        }
+        h3.applervision_img {
+          color: var(--white);
+          font-family: "Inter_thin";
+          font-size: 29px;
+        }
+        p {
+          margin: 16px 0px;
+          font-size: 14px;
+          font-family: "Inter_medium";
+          line-height: 24px;
+          color: var(--gray_text);
+        }
+      }
+    }
+    .airpod_img {
+      background-color: var(--light_gray);
+    }
+    .applervision_img {
+      background-color: var(--bold_gray);
+    }
+  }
+  .right_section {
+    width: 100%;
+    height: 100%;
+    .right {
+      @include displayCenter(flex-end, center);
+      position: relative;
+      background-color: var(--light_gray);
+      .product_name {
+        margin: 164px 56px;
+        p {
+          margin: 16px 0px;
+          font-size: 14px;
+          font-family: "Inter_medium";
+          line-height: 24px;
+          color: var(--gray_text);
+        }
+        h3.macbook_air_img {
+          font-size: 64px;
+          font-family: "Inter_thin";
+        }
+      }
+      .macbook_air_img {
+        margin: 49px 0px;
+      }
+    }
+  }
 }

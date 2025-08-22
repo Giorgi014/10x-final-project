@@ -8,7 +8,8 @@ export const Button = ({variant = "default", children, ...props }) => {
     className={clsx(
       "button",
       {
-        "btn_shop": variant === "shop"
+        "btn_shop": variant === "shop",
+        "btn_shop_black": variant === "shop_black"
       }
     )}
     >

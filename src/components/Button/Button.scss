@@ -50,3 +50,38 @@
     color: #000;
   }
 }
+
+.btn_shop_black {
+  @include displayCenter(center, center);
+  position: relative;
+  width: 191px;
+  height: 51px;
+  background: transparent;
+  border: 1px solid var(--black_text_color);
+  border-radius: 8px;
+  overflow: hidden;
+  &::before {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 8px;
+    background: var(--black_text_color);
+    transition: width 0.5s ease;
+  }
+  span {
+    position: relative;
+    z-index: 1;
+    color: var(--black_text_color);
+    transition: color 0.4s ease-in-out;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  &:hover span {
+    color: var(--white);
+  }
+}
