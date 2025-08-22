@@ -60,8 +60,28 @@
         margin: 24px 0px;
       }
     }
-    .banner_img{
-        width: clamp(326px, 34vw, 406px);
+    .banner_img {
+      width: clamp(326px, 34vw, 406px);
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1000px) {
+  .head_banner_container {
+    .banner_section {
+      flex-direction: column;
+      text-align: center;
+      .product_info {
+        @include displayCenter(space-between, center);
+        flex-direction: column;
+        margin-top: 88px;
+        margin-bottom: 48px;
+      }
+      .banner_img {
+        width: clamp(270px, 35vw, 406px);
+      }
     }
   }
 }
