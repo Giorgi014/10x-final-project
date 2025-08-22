@@ -64,7 +64,7 @@ const SecondaryBanner = () => {
       </section>
       <section className="right_section">
         {rightSection && (
-          <div className={`right ${rightSection.className}`}>
+          <div className="right">
             <div className="product_name">
               <h3 className={rightSection.className}>{rightSection.title}</h3>
               <p className={rightSection.className}>
@@ -77,7 +77,7 @@ const SecondaryBanner = () => {
             <img
               src={rightSection.src}
               alt={rightSection.alt}
-              className={rightSection.className}
+              // className={rightSection.className}
             />
           </div>
         )}

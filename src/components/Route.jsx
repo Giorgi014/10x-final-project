@@ -12,7 +12,7 @@ import { Button } from "./Button/Button";
 // Images
 
 import Logo from "../assets/images/Logo.png";
-import Banner_img from "../assets/images/Iphone Image (1).png";
+import Banner_img from "../assets/images/IphoneImage(1).png";
 
 export {
   Header,
