@@ -2,7 +2,7 @@ import {
   Playstation,
   Airpod,
   Applervision,
-  Macbook_air,
+  Macbookair,
 } from "../../../../Images";
 import { Button } from "../../../../Route";
 import "./SecondaryBanner.scss";
@@ -35,12 +35,12 @@ const images = [
   },
   {
     id: 4,
-    src: Macbook_air,
+    src: Macbookair,
     alt: "Macbook Air",
     title: "Macbook Air",
     description:
       "The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.",
-    className: "macbook_air_img",
+    className: "Macbookair_img",
   },
 ];
 
