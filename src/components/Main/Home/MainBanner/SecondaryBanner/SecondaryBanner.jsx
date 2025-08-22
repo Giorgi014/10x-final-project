@@ -1,6 +1,6 @@
-import { images } from "./imagesData";
-import ProductCard from "./ProductCard";
-import RightProductCard from "./RightProductCard";
+import { images } from "./ImagesData.jsx";
+import ProductCard from "./ProductCard.jsx";
+import RightProductCard from "./RightProductCard.jsx";
 import "./SecondaryBanner.scss";
 
 const SecondaryBanner = () => {
