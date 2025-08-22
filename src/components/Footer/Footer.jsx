@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div style={{width: '100%', height: '100px', backgroundColor: 'black'}}>Footer</div>
   )
 }
 

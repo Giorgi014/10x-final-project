@@ -20,6 +20,9 @@
   @include displayCenter(space-between, center);
   width: 100%;
   max-width: 1920px;
+  height: clamp(400px, 55vw, 600px);
+  overflow: hidden;
+  margin: 0 auto;
   .left_section {
     width: 100%;
     display: grid;
@@ -46,18 +49,18 @@
       .product_name {
         margin: 0px 48px;
         h3.playstation_img {
-          font-size: 49px;
-          font-family: "Inter_medium";
+          font-size: clamp(34px, 3vw, 49px);
+          font-family: "Inter_thin";
           color: var(--black_text_color);
         }
         h3.airpod_img {
-          font-size: 29px;
+          font-size: clamp(20px, 2vw, 34px);
           font-family: "Inter_thin";
         }
         h3.applervision_img {
           color: var(--white);
           font-family: "Inter_thin";
-          font-size: 29px;
+          font-size: clamp(20px, 2vw, 34px);
         }
         p {
           margin: 16px 0px;
@@ -81,6 +84,7 @@
     .right {
       @include displayCenter(flex-end, center);
       position: relative;
+      height: 100%;
       background-color: var(--light_gray);
       .product_name {
         margin: 164px 56px;
@@ -92,13 +96,19 @@
           color: var(--gray_text);
         }
         h3.macbook_air_img {
-          font-size: 64px;
+          font-size: clamp(34px, 4vw, 64px);
           font-family: "Inter_thin";
         }
       }
-      .macbook_air_img {
-        margin: 49px 0px;
-      }
     }
   }
+}
+
+// Responsive
+
+@media screen and (max-width: 1200px) {
+    .secondary_banner_container {
+        flex-direction: column;
+        height: auto;
+    }
 }
