@@ -5,6 +5,7 @@ import {
   Headphones,
   Computers,
   Gaming,
+  Oven
 } from "../../../RoutImages";
 
 export const productImages = [
@@ -12,6 +13,7 @@ export const productImages = [
     id: 1,
     src: Phones,
     alt: "Phones",
+    title: "Phones",
     className: "gaming category_item",
   },
   {
@@ -46,6 +48,13 @@ export const productImages = [
     src: Gaming,
     alt: "Gaming",
     title: "Gaming",
+    className: "gaming category_item",
+  },
+  {
+    id: 7,
+    src: Oven,
+    alt: "Household appliances",
+    title: "Households",
     className: "gaming category_item",
   },
 ];
