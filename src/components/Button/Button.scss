@@ -89,8 +89,8 @@
 .btn_buy_now {
   @include displayCenter(center, center);
   position: relative;
-  width: 191px;
-  height: 51px;
+  width: clamp(139.5px, 13vw, 191px);
+    height: clamp(48px, 3vw, 51px);
   background: var(--black_text_color);
   border: none;
   border-radius: 8px;

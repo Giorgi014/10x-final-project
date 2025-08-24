@@ -3,7 +3,7 @@ import { Button } from "../../../Button/Button";
 
 const ProductCard = ({ id, src, title, price, className }) => {
   return (
-    <div key={id} className={`product_card ${className}`}>
+    <div key={id} className={`product_card ${className}`} title={title}>
       <IoIosHeartEmpty className="heart_icon" />
       <div className="product">
         <img src={src} alt={title} />
