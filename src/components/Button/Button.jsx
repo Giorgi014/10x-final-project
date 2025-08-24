@@ -9,7 +9,8 @@ export const Button = ({variant = "default", children, ...props }) => {
       "button",
       {
         "btn_shop": variant === "shop",
-        "btn_shop_black": variant === "shop_black"
+        "btn_shop_black": variant === "shop_black",
+        "btn_buy_now": variant === "buy_now"
       }
     )}
     >
