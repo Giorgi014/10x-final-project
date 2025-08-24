@@ -1,4 +1,4 @@
-import { productImages } from "./ProductImages";
+import { productImages } from "./CategoryImages";
 import CategoryCard from "./CategoryCard";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 import "./Category.scss";

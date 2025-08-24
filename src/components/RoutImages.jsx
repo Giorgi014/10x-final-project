@@ -15,6 +15,14 @@ import Headphones from "../assets/images/Headphones.png";
 import Computers from "../assets/images/Computers.png";
 import Gaming from "../assets/images/Gaming.png";
 import Oven from "../assets/images/oven.svg";
+import Iphone14 from "../assets/images/Iphone14pro1.png";
+import Blackmagic from "../assets/images/Iphone14pro1(1).png";
+import Applewatch from "../assets/images/Iphone14pro1(2).png";
+import Airpodssilver from "../assets/images/Iphone14pro1(3).png";
+import Galaxywatch from "../assets/images/Iphone14pro1(4).png";
+import Zfold from "../assets/images/Iphone14pro1(5).png";
+import Galaxybuds from "../assets/images/Iphone14pro1(6).png";
+import Ipad from "../assets/images/Iphone14pro1(7).png";
 
 export {
   Playstation,
@@ -32,4 +40,12 @@ export {
   Computers,
   Gaming,
   Oven,
+  Iphone14,
+  Blackmagic,
+  Applewatch,
+  Airpodssilver,
+  Galaxywatch,
+  Zfold,
+  Galaxybuds,
+  Ipad,
 };
