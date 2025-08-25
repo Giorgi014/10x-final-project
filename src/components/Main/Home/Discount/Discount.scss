@@ -3,3 +3,13 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+.discount_container{
+  width: 100%;
+  max-width: 1920px;
+  .carts{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+  }
+}
