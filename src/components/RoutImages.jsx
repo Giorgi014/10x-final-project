@@ -23,6 +23,11 @@ import Galaxywatch from "../assets/images/Iphone14pro1(4).png";
 import Zfold from "../assets/images/Iphone14pro1(5).png";
 import Galaxybuds from "../assets/images/Iphone14pro1(6).png";
 import Ipad from "../assets/images/Iphone14pro1(7).png";
+import Logo from "../assets/images/Logo1.png";
+import Twitter from "../assets/images/Twitter.png";
+import Facebook from "../assets/images/Facebook.png";
+import Tiktok from "../assets/images/Tiktok.png";
+import Instagram from "../assets/images/Instagram.png";
 
 export {
   Playstation,
@@ -48,4 +53,9 @@ export {
   Zfold,
   Galaxybuds,
   Ipad,
+  Logo,
+  Twitter,
+  Facebook,
+  Tiktok,
+  Instagram,
 };
