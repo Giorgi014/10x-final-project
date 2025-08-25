@@ -47,52 +47,6 @@
     justify-content: space-between;
     row-gap: 16px;
     width: 100%;
-    .product_card {
-      @include displayCenter(flex-start, center);
-      flex-direction: column;
-      width: clamp(163.3px, 16vw, 268px);
-      height: clamp(352px, 24vw, 432px);
-      background-color: var(--white_cart);
-      border-radius: 8px;
-      padding: 24px 16px;
-      .heart_icon {
-        align-self: flex-end;
-        font-size: 24px;
-        color: var(--gray_text);
-        cursor: pointer;
-      }
-      .product {
-        @include displayCenter(space-evenly, center);
-        flex-direction: column;
-        margin-top: 16px;
-        height: 100%;
-        img {
-          width: clamp(104px, 8vw, 160px);
-          height: clamp(104px, 8vw, 160px);
-        }
-        .product_title {
-          text-align: center;
-          width: clamp(104px, 8vw, 160px);
-          margin: 16px auto;
-          font-family: "Inter_medium";
-          font-size: 16px;
-          line-height: 24px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          line-clamp: 2;
-          color: var(--black_text_color);
-        }
-        .product_price {
-          margin-bottom: 24px;
-          font-family: "Inter_semi_bold";
-          font-size: 24px;
-          line-height: 24px;
-          letter-spacing: 3%;
-          color: var(--black_text_color);
-        }
-      }
-    }
   }
 }
 
@@ -103,9 +57,6 @@
     .product_section {
       grid-template-columns: repeat(3, auto);
       justify-content: space-between;
-      .product_card {
-        width: clamp(163.3px, 20vw, 268px);
-      }
     }
   }
 }
@@ -113,11 +64,6 @@
 @media screen and (max-width: 1025px) {
   .products_container {
     padding: 56px 50px;
-    .product_section {
-      .product_card {
-        width: clamp(163.3px, 27vw, 268px);
-      }
-    }
   }
 }
 
@@ -131,9 +77,6 @@
   .products_container {
     .product_section {
       grid-template-columns: repeat(2, auto);
-      .product_card {
-        width: clamp(163.3px, 43vw, 268px);
-      }
     }
   }
 }
@@ -143,9 +86,6 @@
     .product_section {
       grid-template-columns: repeat(1, auto);
       justify-content: center;
-      .product_card {
-        width: clamp(163.3px, 80vw, 268px);
-      }
     }
   }
 }

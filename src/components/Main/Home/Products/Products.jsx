@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { productImages } from "./ProductsImages";
-import ProductCard from "./ProductCard";
+import { Cart } from "../../../Cart/Cart";
 import "./Products.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -48,7 +48,7 @@ const Products = () => {
 
       <section className="product_section">
         {productImages.map(({ id, src, title, price, className }) => (
-          <ProductCard
+          <Cart
             key={id}
             src={src}
             title={title}
