@@ -2,6 +2,7 @@ import Category from "./Category/Category";
 import Discount from "./Discount/Discount";
 import MainBanner from "./MainBanner/MainBanner";
 import Products from "./Products/Products";
+import SummerSales from "./SummerSales/SummerSales";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Category />
       <Products />
       <Discount />
+      <SummerSales />
     </main>
   );
 };

@@ -30,6 +30,7 @@ import Tiktok from "../assets/images/Tiktok.png";
 import Instagram from "../assets/images/Instagram.png";
 import Iphonegold from "../assets/images/Iphone14pro1(8).png"
 import Iphonewhite from "../assets/images/Iphone14pro1(9).png"
+import Banner2 from "../assets/images/Banner2(1).png"
 
 export {
   Playstation,
@@ -62,4 +63,5 @@ export {
   Instagram,
   Iphonegold,
   Iphonewhite,
+  Banner2,
 };

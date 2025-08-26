@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Inter_thin";
+  src: url(../../../../assets/fonts/static/Inter_18pt-Thin.ttf) format("woff2");
+}
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../../assets/fonts/static/Inter_18pt-Medium.ttf)
+    format("woff2");
+}
+@font-face {
+  font-family: "Inter_regular";
+  src: url(../../../../assets/fonts/static/Inter_18pt-Regular.ttf)
+    format("woff2");
+}
+
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.summer_sales_container {
+  @include displayCenter(center, center);
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 448px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  .summer_sales {
+    @include displayCenter(center, center);
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .summer_sale_head {
+      width: 90%;
+      font-family: "Inter_thin";
+      font-size: clamp(48px, 5vw, 72px);
+      line-height: 72px;
+      color: var(--white);
+      margin-bottom: 16px;
+      span {
+        font-family: "Inter_medium";
+      }
+    }
+    .summer_sale_description {
+      width: 90%;
+      font-family: "Inter_regular";
+      font-size: 16px;
+      line-height: 32px;
+      color: var(--gray_text);
+      margin-bottom: 40px;
+    }
+  }
+  .banner_image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 768px) {
+  .summer_sales_container {
+    height: 330px;
+    .summer_sales {
+      .summer_sale_head {
+        line-height: 50px;
+        margin-bottom: 0px;
+      }
+      .summer_sale_description {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
