@@ -1,15 +1,71 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../../assets/fonts/static/Inter_18pt-Medium.ttf)
+    format("woff2");
+}
+
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
 }
 
-.discount_container{
+.discount_container {
   width: 100%;
   max-width: 1920px;
-  .carts{
+  padding: 80px 160px;
+  margin: 0 auto;
+  .discount_title {
+    font-family: "Inter_medium";
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .carts {
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-content: space-between;
+    margin-top: 32px;
+  }
+}
+
+//  Responsive
+
+@media screen and (max-width: 1150px) {
+  .discount_container {
+    .carts {
+      grid-template-columns: repeat(3, auto);
+      row-gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .discount_container {
+    padding: 80px 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .discount_container {
+    padding: 56px 16px;
+    .discount_title {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .discount_container {
+    .carts {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .discount_container {
+    .carts {
+      grid-template-columns: repeat(1, auto);
+      justify-content: center;
+    }
   }
 }
