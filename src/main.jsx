@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.scss";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { LoaderProvider } from "./components/Context/LoaderContext.jsx";
 
 const Home = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.Home }))
@@ -32,6 +33,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <LoaderProvider>
+      <RouterProvider router={router} />
+    </LoaderProvider>
   </StrictMode>
 );
