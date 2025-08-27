@@ -28,9 +28,13 @@ import Twitter from "../assets/images/Twitter.png";
 import Facebook from "../assets/images/Facebook.png";
 import Tiktok from "../assets/images/Tiktok.png";
 import Instagram from "../assets/images/Instagram.png";
-import Iphonegold from "../assets/images/Iphone14pro1(8).png"
-import Iphonewhite from "../assets/images/Iphone14pro1(9).png"
-import Banner2 from "../assets/images/Banner2(1).png"
+import Iphonegold from "../assets/images/Iphone14pro1(8).png";
+import Iphonewhite from "../assets/images/Iphone14pro1(9).png";
+import Banner2 from "../assets/images/Banner2(1).png";
+import Popularproducts from "../assets/images/Group1.png";
+import Ipadpro from "../assets/images/image64.png";
+import Samsunggalaxy from "../assets/images/image41.png";
+import Mackbook from "../assets/images/Macbook1.png";
 
 export {
   Playstation,
@@ -64,4 +68,8 @@ export {
   Iphonegold,
   Iphonewhite,
   Banner2,
+  Popularproducts,
+  Ipadpro,
+  Samsunggalaxy,
+  Mackbook,
 };

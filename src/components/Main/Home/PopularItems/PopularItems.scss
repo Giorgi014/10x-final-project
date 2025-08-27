@@ -4,8 +4,61 @@
     format("woff2");
 }
 
+@font-face {
+  font-family: "Inter_light";
+  src: url(../../../../assets/fonts/static/Inter_18pt-Light.ttf) format("woff2");
+}
+
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+}
+
+.popular_items_container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  .popular_item_card {
+    @include displayCenter(space-between, flex-start);
+    flex-direction: column;
+    width: 100%;
+    padding: 56px 32px;
+    img {
+      width: 100%;
+      max-width: 416px;
+      height: clamp(150px, 20vw, 400px);
+    }
+    .popular_item_name {
+      width: 100%;
+      font-family: "Inter_light";
+      font-size: 33px;
+      color: var(--black_text_color);
+    }
+    .popular_item_description {
+      width: 100%;
+      margin: 16px auto;
+      font-family: "Inter_medium";
+      font-size: 14px;
+      color: var(--gray_text);
+    }
+  }
+  .popular_products {
+    background-color: var(--bolder_white);
+  }
+  .popular_ipadpro {
+    background-color: var(--white_bg);
+  }
+  .popular_samsung_galaxy {
+    background-color: var(--light_gray);
+  }
+  .popular_mackbook {
+    background-color: var(--bold_gray);
+    .popular_item_name {
+      color: var(--white);
+    }
+  }
 }
