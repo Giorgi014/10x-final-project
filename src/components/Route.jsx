@@ -11,8 +11,8 @@ import { Button } from "./Button/Button";
 
 // Images
 
-import Logo from "../assets/images/Logo.png";
-import Banner_img from "../assets/images/IphoneImage(1).png";
+import Logo from "../../public/images/Logo.png";
+import Banner_img from "../../public/images/IphoneImage(1).png";
 
 export {
   Header,
