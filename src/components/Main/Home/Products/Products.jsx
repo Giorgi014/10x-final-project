@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { productImages } from "./ProductsImages";
 import { Cart } from "../../../Cart/Cart";
+import { useData } from "../../../Context/DataContext";
 import "./Products.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const Products = () => {
+  const { data } = useData();
+
   const [isNarrow, setIsNarrow] = useState(() => {
     if (typeof window === "undefined") return false;
     return window.innerWidth <= 500;
@@ -17,6 +19,12 @@ const Products = () => {
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
+
+  if (!data) return null;
+
+  const newArrivalProducts = data.newArrival
+    .map((id) => data.allImages.find((img) => img.id === id))
+    .filter(Boolean);
 
   return (
     <article className="products_container">
@@ -47,13 +55,13 @@ const Products = () => {
       </section>
 
       <section className="product_section">
-        {productImages.map(({ id, src, title, price, className }) => (
+        {newArrivalProducts.map(({ id, url, description, price }) => (
           <Cart
             key={id}
-            src={src}
-            title={title}
+            id={id}
+            url={url}
+            description={description}
             price={price}
-            className={className}
           />
         ))}
       </section>

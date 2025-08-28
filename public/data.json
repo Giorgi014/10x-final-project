@@ -2,85 +2,85 @@
   "allImages": [
     {
       "id": 1,
-      "url": "../assets/images/Iphone14pro1.png",
+      "url": "../src/assets/images/Iphone14pro1.png",
       "description": "Apple iPhone 14 Pro Max 128GB Deep Purple",
       "price": "900"
     },
     {
       "id": 2,
-      "url": "../assets/images/Iphone14pro1(1).png",
+      "url": "../src/assets/images/Iphone14pro1(1).png",
       "description": "Blackmagic Pocket Cinema Camera 6k",
       "price": "2535"
     },
     {
       "id": 3,
-      "url": "../assets/images/Iphone14pro1(2).png",
+      "url": "../src/assets/images/Iphone14pro1(2).png",
       "description": "Apple Watch Series 9 GPS 41mm Starlight Aluminium",
       "price": "399"
     },
     {
       "id": 4,
-      "url": "../assets/images/Iphone14pro1(3).png",
+      "url": "../src/assets/images/Iphone14pro1(3).png",
       "description": "AirPods Max Silver Starlight Aluminium",
       "price": "549"
     },
     {
       "id": 5,
-      "url": "../assets/images/Iphone14pro1(4).png",
+      "url": "../src/assets/images/Iphone14pro1(4).png",
       "description": "Samsung Galaxy Watch6 Classic 47mm Black",
       "price": "369"
     },
     {
       "id": 6,
-      "url": "../assets/images/Iphone14pro1(5).png",
+      "url": "../src/assets/images/Iphone14pro1(5).png",
       "description": "Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
       "price": "1799"
     },
     {
       "id": 7,
-      "url": "../assets/images/Iphone14pro1(6).png",
+      "url": "../src/assets/images/Iphone14pro1(6).png",
       "description": "Galaxy Buds FE Graphite",
       "price": "99,99"
     },
     {
       "id": 8,
-      "url": "../assets/images/Iphone14pro1(7).png",
+      "url": "../src/assets/images/Iphone14pro1(7).png",
       "description": "Apple iPad 9 10.2 64GB Wi-Fi Silver (MK2L3) 2021",
       "price": "398"
     },
     {
       "id": 9,
-      "url": "../assets/images/Iphone14pro1(8).png",
+      "url": "../src/assets/images/Iphone14pro1(8).png",
       "description": "Apple iPhone 14 Pro 512GB Gold (MQ233)",
       "price": "1437"
     },
     {
       "id": 10,
-      "url": "../assets/images/Iphone14pro1(9).png",
+      "url": "../src/assets/images/Iphone14pro1(9).png",
       "description": "Apple iPhone 14 Pro 1TB Gold (MQ2V3)",
       "price": "1499"
     },
     {
       "id": 11,
-      "url": "../assets/images/Group1.png",
+      "url": "../src/assets/images/Group1.png",
       "name": "Popular Products",
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
     },
     {
       "id": 12,
-      "url": "../assets/images/image64.png",
+      "url": "../src/assets/images/image64.png",
       "name": "Ipad Pro",
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
     },
     {
       "id": 13,
-      "url": "../assets/images/image41.png",
+      "url": "../src/assets/images/image41.png",
       "name": "Samsung Galaxy",
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
     },
     {
       "id": 14,
-      "url": "../assets/images/Macbook1.png",
+      "url": "../src/assets/images/Macbook1.png",
       "name": "Macbook Pro",
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
     }

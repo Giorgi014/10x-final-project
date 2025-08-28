@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
@@ -7,7 +6,7 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("../data.json");
+      const response = await fetch("/data.json");
       const json = await response.json();
       setData(json);
     };
@@ -21,6 +20,8 @@ export const DataProvider = ({ children }) => {
   );
 };
 
-export const imageContext = () => {
+export const useData = () => {
   return useContext(DataContext);
 };
+
+// ../../../public
