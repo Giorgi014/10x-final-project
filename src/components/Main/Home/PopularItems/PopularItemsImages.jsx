@@ -17,7 +17,7 @@ export const PopularItemsImages = [
   {
     id: 2,
     src: Ipadpro,
-    name: "Popular Products",
+    name: "Ipad Pro",
     description:
       "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
     className: "popular_item popular_ipadpro",
@@ -25,7 +25,7 @@ export const PopularItemsImages = [
   {
     id: 3,
     src: Samsunggalaxy,
-    name: "Popular Products",
+    name: "Samsung Galaxy",
     description:
       "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
     className: "popular_item popular_samsung_galaxy",
