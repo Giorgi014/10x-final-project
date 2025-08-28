@@ -1,9 +1,9 @@
 import { Button } from "../../../Route";
 
-const PopularItemsCard = ({ id, src, name, description, className }) => {
+const PopularItemsCard = ({ id, url, name, description, className }) => {
   return (
     <div key={id} className={`popular_item_card ${className}`}>
-      <img src={src} alt={name} />
+      <img src={url} alt={name} />
       <p className="popular_item_name">{name}</p>
       <p className="popular_item_description">{description}</p>
       <Button variant="shop_black">

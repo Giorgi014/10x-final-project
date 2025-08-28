@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { PopularItemsImages } from "./PopularItemsImages";
 import PopularItemsCard from "./PopularItemsCard";
+import { PopularItemsImages } from "./PopularItemsImages";
+import { useData } from "../../../Context/DataContext";
 import "./PopularItems.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,6 +11,7 @@ import "swiper/css/pagination";
 
 const PopularItems = () => {
   const [isSlider, setIsSlider] = useState(false);
+  const { data } = useData();
 
   useEffect(() => {
     const checkSlider = () => {
@@ -19,6 +21,12 @@ const PopularItems = () => {
     window.addEventListener("resize", checkSlider);
     return () => window.removeEventListener("resize", checkSlider);
   }, []);
+
+  if (!data) return null;
+
+  const popular = data.popularProducts
+    .map((id) => data.allImages.find((img) => img.id === id))
+    .filter(Boolean);
 
   if (isSlider) {
     return (
@@ -33,9 +41,15 @@ const PopularItems = () => {
             900: { slidesPerView: 3, spaceBetween: 16 },
           }}
         >
-          {PopularItemsImages.map((item) => (
-            <SwiperSlide key={item.id}>
-              <PopularItemsCard {...item} />
+          {popular.map(({ id, url, name, description }) => (
+            <SwiperSlide key={id}>
+              <PopularItemsCard
+                id={id}
+                url={url}
+                name={name}
+                description={description}
+                // className={className}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -45,13 +59,14 @@ const PopularItems = () => {
 
   return (
     <div className="popular_items_container grid">
-      {PopularItemsImages.map(({ id, src, name, description, className }) => (
+      {popular.map(({ id, url, name, description }) => (
         <PopularItemsCard
           key={id}
-          src={src}
+          id={id}
+          url={url}
           name={name}
           description={description}
-          className={className}
+          // className={className}
         />
       ))}
     </div>
