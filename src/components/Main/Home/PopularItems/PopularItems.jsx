@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import PopularItemsCard from "./PopularItemsCard";
-import { PopularItemsImages } from "./PopularItemsImages";
 import { useData } from "../../../Context/DataContext";
 import "./PopularItems.scss";
 
@@ -48,7 +47,6 @@ const PopularItems = () => {
                 url={url}
                 name={name}
                 description={description}
-                // className={className}
               />
             </SwiperSlide>
           ))}
@@ -66,7 +64,6 @@ const PopularItems = () => {
           url={url}
           name={name}
           description={description}
-          // className={className}
         />
       ))}
     </div>
