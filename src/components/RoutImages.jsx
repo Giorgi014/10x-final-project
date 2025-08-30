@@ -35,6 +35,8 @@ import Popularproducts from "/images/Group1.png";
 import Ipadpro from "/images/image64.png";
 import Samsunggalaxy from "/images/image41.png";
 import Mackbook from "/images/Macbook1.png";
+import Autherizationimage from "/images/SideImage.png";
+import Logotext from "/images/LogoVector.png";
 
 export {
   Playstation,
@@ -72,4 +74,6 @@ export {
   Ipadpro,
   Samsunggalaxy,
   Mackbook,
+  Autherizationimage,
+  Logotext
 };

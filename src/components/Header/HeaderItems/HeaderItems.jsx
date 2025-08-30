@@ -1,7 +1,7 @@
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
-import { UserCart } from "./UserCart";
+import { Authorization } from "../../Route";
 import { useState } from "react";
 import "./HeaderItems.scss";
 
@@ -25,7 +25,7 @@ const HeaderItems = () => {
       <div className="user_cont" onClick={toggleUser}>
         <FiUser className="header_icon user" />
         <p className="user_icon icons">Account</p>
-        {isOpen && <UserCart />}
+        {isOpen && <Authorization />}
       </div>
     </div>
   );

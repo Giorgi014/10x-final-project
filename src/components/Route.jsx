@@ -6,6 +6,7 @@ import About from "./Main/About/About";
 import ContactUs from "./Main/ContactUs/ContactUs";
 import Blog from "./Main/Blog/Blog";
 import Footer from "./Footer/Footer";
+import { Authorization } from "./Authorization/Authorization";
 import { Cart } from "./Cart/Cart";
 import { Button } from "./Button/Button";
 
@@ -25,4 +26,5 @@ export {
   Button,
   Logo,
   Banner_img,
+  Authorization,
 };

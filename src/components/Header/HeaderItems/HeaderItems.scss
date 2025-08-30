@@ -3,7 +3,6 @@
   src: url(../../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
 }
 
-
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
@@ -53,11 +52,11 @@
         font-size: 16px;
         cursor: pointer;
         transition: color 0.2s ease-in-out;
-        .login_icon{
+        .login_icon {
           font-size: 20px;
         }
         &:hover {
-          color: #EA4335;
+          color: #ea4335;
         }
       }
     }
