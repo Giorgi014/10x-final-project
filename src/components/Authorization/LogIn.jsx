@@ -2,6 +2,10 @@ import { Button } from "../Route";
 import { Logotext } from "../RoutImages";
 
 export const LogIn = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <article className="login_container">
       <div className="login_header">
@@ -11,12 +15,7 @@ export const LogIn = () => {
       <p className="enter_details">Enter your details below</p>
       <form action="login" className="login_form">
         <div className="input_container">
-          <input
-            type="email"
-            name="email"
-            className="email_input"
-            id="email"
-          />
+          <input type="email" name="email" className="email_input" id="email" />
           <label htmlFor="email">Enter your email</label>
         </div>
         <div className="password_container">
@@ -29,10 +28,16 @@ export const LogIn = () => {
           <label htmlFor="password">Enter your password</label>
         </div>
         <div className="login_actions">
-          <Button variant="login">Log In</Button>
+          <Button variant="login" onClick={handleLogin}>
+            <span>Log In</span>
+          </Button>
           <p className="forgot_password">Forgot password?</p>
         </div>
       </form>
+      <div className="dont_have_account">
+        <p className="question">You don't have an account?</p>
+        <p className="create_account">Sign up</p>
+      </div>
     </article>
   );
 };

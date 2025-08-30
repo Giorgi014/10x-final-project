@@ -10,7 +10,10 @@ const HeaderItems = () => {
 
   const toggleUser = () => {
     setIsOpen(!isOpen);
-  }
+  };
+  const handleClose = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div className="header_items">
@@ -25,7 +28,7 @@ const HeaderItems = () => {
       <div className="user_cont" onClick={toggleUser}>
         <FiUser className="header_icon user" />
         <p className="user_icon icons">Account</p>
-        {isOpen && <Authorization />}
+        {isOpen && <Authorization onClose={handleClose} />}
       </div>
     </div>
   );

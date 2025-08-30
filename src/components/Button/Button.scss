@@ -90,7 +90,7 @@
   @include displayCenter(center, center);
   position: relative;
   width: clamp(139.5px, 13vw, 191px);
-    height: clamp(48px, 3vw, 51px);
+  height: clamp(48px, 3vw, 51px);
   background: var(--black_text_color);
   border: none;
   border-radius: 8px;
@@ -104,7 +104,42 @@
     width: 0%;
     height: 100%;
     border-radius: 8px;
-    background: #A020F0;
+    background: #a020f0;
+    transition: width 0.5s ease;
+  }
+  span {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    transition: color 0.4s ease-in-out;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  &:hover span {
+    color: var(--white);
+  }
+}
+
+.btn_login {
+  @include displayCenter(center, center);
+  position: relative;
+  width: clamp(139.5px, 13vw, 150px);
+  height: clamp(48px, 3vw, 51px);
+  background: var(--black_text_color);
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  &::before {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 8px;
+    background: #a020f0;
     transition: width 0.5s ease;
   }
   span {
