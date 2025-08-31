@@ -34,118 +34,265 @@
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
     }
-    .login_container {
-      @include displayCenter(center, flex-start);
+    .login_regigration {
+      @include displayCenter(center, center);
       flex-direction: column;
       width: 50%;
       height: 100%;
       padding: 20px;
-      .login_header {
-        @include displayCenter(flex-start, center);
-        gap: 5px;
-        width: 100%;
-        margin-bottom: 10px;
-        h2 {
-          font-family: "Inter_medium";
-          font-size: 20px;
-          color: var(--black_text_color);
-        }
-      }
-      .enter_details {
-        font-family: "Inter_medium";
-        color: var(--black_text_color);
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-      .login_form {
-        @include displayCenter(center, center);
+      .login_container {
+        @include displayCenter(center, flex-start);
         flex-direction: column;
         width: 100%;
-        .input_container {
-          position: relative;
+        .login_header {
+          @include displayCenter(flex-start, center);
+          gap: 5px;
           width: 100%;
-          border-bottom: 1px solid #1b1b1b1a;
-          margin: 16px 0px;
-          input {
-            width: 100%;
-            border: none;
-            outline: none;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 0%;
-            color: #1b1b1be5;
-          }
-          label {
-            position: absolute;
-            top: 50%;
-            left: 0px;
-            transform: translateY(-50%);
-            pointer-events: none;
-            transition: 0.5s;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 18px;
-            letter-spacing: 0%;
-            color: #1b1b1b99;
-          }
-          input:focus ~ label {
-            top: -5px;
-          }
-        }
-        .password_container {
-          position: relative;
-          width: 100%;
-          border-bottom: 1px solid #1b1b1b1a;
-          margin: 16px 0px;
-          input {
-            width: 100%;
-            border: none;
-            outline: none;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 0%;
-            color: #1b1b1be5;
-          }
-          label {
-            position: absolute;
-            top: 50%;
-            left: 0px;
-            transform: translateY(-50%);
-            pointer-events: none;
-            transition: 0.5s;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 18px;
-            letter-spacing: 0%;
-            color: #1b1b1b99;
-          }
-          input:focus ~ label {
-            top: -5px;
-          }
-        }
-        .login_actions {
-          @include displayCenter(space-between, center);
-          width: 100%;
-          margin-top: 10px;
-          .forgot_password {
+          margin-bottom: 10px;
+          h2 {
             font-family: "Inter_medium";
-            font-size: 14px;
-            color: var(--gray_text);
-            text-decoration: underline;
-            cursor: pointer;
-            transition: color 0.2s ease-in-out;
-            &:hover {
-              color: var(--black_text_color);
+            font-size: 20px;
+            color: var(--black_text_color);
+          }
+        }
+        .enter_details {
+          font-family: "Inter_medium";
+          color: var(--black_text_color);
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        .login_form {
+          @include displayCenter(center, center);
+          flex-direction: column;
+          width: 100%;
+          .input_container {
+            position: relative;
+            width: 100%;
+            border-bottom: 1px solid #1b1b1b1a;
+            margin: 16px 0px;
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0%;
+              color: #1b1b1be5;
+            }
+            label {
+              position: absolute;
+              top: 50%;
+              left: 0px;
+              transform: translateY(-50%);
+              pointer-events: none;
+              transition: 0.5s;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              letter-spacing: 0%;
+              color: #1b1b1b99;
+            }
+            input:focus ~ label {
+              top: -5px;
+            }
+          }
+          .password_container {
+            position: relative;
+            width: 100%;
+            border-bottom: 1px solid #1b1b1b1a;
+            margin: 16px 0px;
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0%;
+              color: #1b1b1be5;
+            }
+            label {
+              position: absolute;
+              top: 50%;
+              left: 0px;
+              transform: translateY(-50%);
+              pointer-events: none;
+              transition: 0.5s;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              letter-spacing: 0%;
+              color: #1b1b1b99;
+            }
+            input:focus ~ label {
+              top: -5px;
+            }
+          }
+          .login_actions {
+            @include displayCenter(space-between, center);
+            width: 100%;
+            margin-top: 10px;
+            .forgot_password {
+              font-family: "Inter_medium";
+              font-size: 14px;
+              color: var(--gray_text);
+              text-decoration: underline;
+              cursor: pointer;
+              transition: color 0.2s ease-in-out;
+              &:hover {
+                color: var(--black_text_color);
+              }
             }
           }
         }
       }
       .dont_have_account {
-        @include displayCenter(space-between, center);
+        @include displayCenter(flex-start, center);
         width: 100%;
-        margin-top: 10px;
+        gap: 5px;
+        margin-top: 20px;
+        .question {
+          font-family: "Inter_medium";
+          font-size: 14px;
+          color: var(--black_text_color);
+        }
+        .create_account {
+          font-family: "Inter_medium";
+          font-size: 14px;
+          color: var(--gray_text);
+          text-decoration: underline;
+          cursor: pointer;
+          transition: color 0.2s ease-in-out;
+          &:hover {
+            color: var(--black_text_color);
+          }
+        }
+      }
+      .registration_container {
+        @include displayCenter(center, flex-start);
+        flex-direction: column;
+        width: 100%;
+        h2 {
+          width: 100%;
+          font-family: "Inter_medium";
+          font-size: 20px;
+          color: var(--black_text_color);
+          margin-bottom: 10px;
+        }
+        .enter_details {
+          font-family: "Inter_medium";
+          color: var(--black_text_color);
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        .registration_form {
+          @include displayCenter(center, center);
+          flex-direction: column;
+          width: 100%;
+          .name_container {
+            position: relative;
+            width: 100%;
+            border-bottom: 1px solid #1b1b1b1a;
+            margin: 16px 0px;
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0%;
+              color: #1b1b1be5;
+            }
+            label {
+              position: absolute;
+              top: 50%;
+              left: 0px;
+              transform: translateY(-50%);
+              pointer-events: none;
+              transition: 0.5s;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              letter-spacing: 0%;
+              color: #1b1b1b99;
+            }
+            input:focus ~ label {
+              top: -5px;
+            }
+          }
+          .input_container {
+            position: relative;
+            width: 100%;
+            border-bottom: 1px solid #1b1b1b1a;
+            margin: 16px 0px;
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0%;
+              color: #1b1b1be5;
+            }
+            label {
+              position: absolute;
+              top: 50%;
+              left: 0px;
+              transform: translateY(-50%);
+              pointer-events: none;
+              transition: 0.5s;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              letter-spacing: 0%;
+              color: #1b1b1b99;
+            }
+            input:focus ~ label {
+              top: -5px;
+            }
+          }
+          .password_container {
+            position: relative;
+            width: 100%;
+            border-bottom: 1px solid #1b1b1b1a;
+            margin: 16px 0px;
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0%;
+              color: #1b1b1be5;
+            }
+            label {
+              position: absolute;
+              top: 50%;
+              left: 0px;
+              transform: translateY(-50%);
+              pointer-events: none;
+              transition: 0.5s;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              letter-spacing: 0%;
+              color: #1b1b1b99;
+            }
+            input:focus ~ label {
+              top: -5px;
+            }
+          }
+        }
+      }
+      .already_have_account {
+        @include displayCenter(flex-start, center);
+        width: 100%;
+        gap: 5px;
+        margin-top: 20px;
         .question {
           font-family: "Inter_medium";
           font-size: 14px;

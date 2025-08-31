@@ -34,10 +34,6 @@ export const LogIn = () => {
           <p className="forgot_password">Forgot password?</p>
         </div>
       </form>
-      <div className="dont_have_account">
-        <p className="question">You don't have an account?</p>
-        <p className="create_account">Sign up</p>
-      </div>
     </article>
   );
 };
