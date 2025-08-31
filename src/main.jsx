@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoaderProvider } from "./components/Context/LoaderContext.jsx";
 import { DataProvider } from "./components/Context/DataContext.jsx";
+import { AuthProvider } from "./components/Context/AuthContext.jsx";
 
 const Home = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.Home }))
@@ -34,10 +35,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <LoaderProvider>
-      <DataProvider>
-        <RouterProvider router={router} />
-      </DataProvider>
-    </LoaderProvider>
+    <AuthProvider>
+      <LoaderProvider>
+        <DataProvider>
+          <RouterProvider router={router} />
+        </DataProvider>
+      </LoaderProvider>
+    </AuthProvider>
   </StrictMode>
 );
