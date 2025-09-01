@@ -2,27 +2,31 @@ import { useState } from "react";
 import { useAuth } from "../Context/AuthContext";
 import { Button } from "../Route";
 import { Logotext } from "../RoutImages";
+import { useNavigate } from "react-router-dom";
+import { useLoader } from "../Context/LoaderContext";
 
 export const LogIn = () => {
   const { login } = useAuth();
   const [value, setValue] = useState({ email: "", password: "" });
   const [error, setError] = useState({});
-  const [successMsg, setSuccessMsg] = useState("");
+  const { setIsLoading } = useLoader();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setValue((v) => ({ ...v, [e.target.name]: e.target.value }));
     setError((r) => ({ ...r, [e.target.name]: undefined, form: undefined }));
-    setSuccessMsg("");
   };
 
   const handleLogin = (e) => {
     e.preventDefault();
     const res = login(value.email.trim(), value.password);
     if (res.ok) {
-      setError({});
-      setSuccessMsg("Logged in successfully ✅");
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        navigate("/");
+      }, 1000);
     } else {
-      setSuccessMsg("");
       setError(res.error || { form: "Login failed" });
     }
   };
@@ -66,7 +70,6 @@ export const LogIn = () => {
           )}
         </div>
         {error.form && <div className="form_error">{error.form}</div>}
-        {successMsg && <div className="form_success">{successMsg}</div>}
         <div className="login_actions">
           <Button variant="login" onClick={handleLogin}>
             <span>Log In</span>

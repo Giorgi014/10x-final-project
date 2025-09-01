@@ -1,27 +1,31 @@
 import { useState } from "react";
 import { useAuth } from "../Context/AuthContext";
 import { Button } from "../Route";
+import { useNavigate } from "react-router-dom";
+import { useLoader } from "../Context/LoaderContext";
 
 export const Registration = () => {
   const { register } = useAuth();
   const [value, setValue] = useState({ name: "", email: "", password: "" });
   const [error, setError] = useState({});
-  const [successMsg, setSuccessMsg] = useState("");
+  const { setIsLoading } = useLoader();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setValue((v) => ({ ...v, [e.target.name]: e.target.value }));
     setError((r) => ({ ...r, [e.target.name]: undefined, form: undefined }));
-    setSuccessMsg("");
   };
 
   const handleRegistration = (e) => {
     e.preventDefault();
     const res = register(value.name.trim(), value.email.trim(), value.password);
     if (res.ok) {
-      setError({});
-      setSuccessMsg("Account created successfully 🎉");
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        navigate("/");
+      }, 1000);
     } else {
-      setSuccessMsg("");
       setError(res.error || { form: "Registration failed" });
     }
   };
@@ -74,7 +78,6 @@ export const Registration = () => {
             <span className="field_error">{error.password}</span>
           )}
           {error.form && <div className="form_error">{error.form}</div>}
-          {successMsg && <div className="form_success">{successMsg}</div>}
         </div>
         <Button variant="registration" onClick={handleRegistration}>
           <span>Create Account</span>
