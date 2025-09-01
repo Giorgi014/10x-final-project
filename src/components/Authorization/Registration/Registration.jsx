@@ -17,9 +17,9 @@ export const Registration = () => {
     setError((r) => ({ ...r, [e.target.name]: undefined, form: undefined }));
   };
 
-  const handleRegistration = (e) => {
+  const handleRegistration = async (e) => {
     e.preventDefault();
-    const res = register(value.name.trim(), value.email.trim(), value.password);
+    const res = await register(value.name.trim(), value.email.trim(), value.password);
     if (res.ok) {
       setIsLoading(true);
       setTimeout(() => {
@@ -27,7 +27,7 @@ export const Registration = () => {
         navigate("/");
       }, 1000);
     } else {
-      setError(res.error || { form: "Registration failed" });
+      setError(res.errors || { form: "Registration failed" });
     }
   };
 

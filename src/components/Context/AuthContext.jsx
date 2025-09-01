@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const register = useCallback((name, email, password) => {
+  const register = useCallback(async(name, email, password) => {
     const parsed = registrationSchema.safeParse({ name, email, password });
     if (!parsed.success) {
       return { ok: false, errors: fieldErrors(parsed.error.issues) };
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
     return { ok: true, user: newUser };
   }, []);
 
-  const login = useCallback((email, password) => {
+  const login = useCallback(async(email, password) => {
     const parsed = loginSchema.safeParse({ email, password });
     if (!parsed.success) {
       return { ok: false, errors: fieldErrors(parsed.error.issues) };

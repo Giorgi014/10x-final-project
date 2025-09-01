@@ -65,6 +65,17 @@
       input:focus ~ label {
         top: -5px;
       }
+      &.has_error {
+        border-bottom: 1px solid red;
+      }
+      .field_error {
+        position: absolute;
+        color: red;
+        left: 0px;
+        bottom: -22px;
+        font-size: 14px;
+        font-family: "Inter_medium";
+      }
     }
     .password_container {
       position: relative;
@@ -97,11 +108,22 @@
       input:focus ~ label {
         top: -5px;
       }
+      &.has_error {
+        border-bottom: 1px solid red;
+      }
+      .field_error {
+        position: absolute;
+        color: red;
+        left: 0px;
+        bottom: -22px;
+        font-size: 14px;
+        font-family: "Inter_medium";
+      }
     }
     .login_actions {
       @include displayCenter(space-between, center);
       width: 100%;
-      margin-top: 10px;
+      margin-top: 16px;
       .forgot_password {
         font-family: "Inter_medium";
         font-size: 14px;

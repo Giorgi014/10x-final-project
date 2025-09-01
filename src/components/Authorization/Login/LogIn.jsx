@@ -18,9 +18,9 @@ export const LogIn = () => {
     setError((r) => ({ ...r, [e.target.name]: undefined, form: undefined }));
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const res = login(value.email.trim(), value.password);
+    const res = await login(value.email.trim(), value.password);
     if (res.ok) {
       setIsLoading(true);
       setTimeout(() => {
@@ -28,7 +28,7 @@ export const LogIn = () => {
         navigate("/");
       }, 1000);
     } else {
-      setError(res.error || { form: "Login failed" });
+      setError(res.errors || { form: "Login failed" });
     }
   };
 
