@@ -3,10 +3,13 @@ import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { Authorization } from "../../Route";
 import { useState } from "react";
+import { UserCart } from "./UserCart";
+import { useAuth } from "../../Context/AuthContext";
 import "./HeaderItems.scss";
 
 const HeaderItems = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user } = useAuth();
 
   const toggleUser = () => {
     setIsOpen(!isOpen);
@@ -28,7 +31,12 @@ const HeaderItems = () => {
       <div className="user_cont" onClick={toggleUser}>
         <FiUser className="header_icon user" />
         <p className="user_icon icons">Account</p>
-        {isOpen && <Authorization onClose={handleClose} />}
+        {isOpen &&
+          (user ? (
+            <UserCart onClose={handleClose} />
+          ) : (
+            <Authorization onClose={handleClose} />
+          ))}
       </div>
     </div>
   );
