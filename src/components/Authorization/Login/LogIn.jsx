@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useAuth } from "../Context/AuthContext";
-import { Button } from "../Route";
-import { Logotext } from "../RoutImages";
+import { useAuth } from "../../Context/AuthContext";
+import { Button } from "../../Route";
+import { Logotext } from "../../RoutImages";
 import { useNavigate } from "react-router-dom";
-import { useLoader } from "../Context/LoaderContext";
+import { useLoader } from "../../Context/LoaderContext";
+import "./Login.scss";
 
 export const LogIn = () => {
   const { login } = useAuth();

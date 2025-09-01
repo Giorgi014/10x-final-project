@@ -35,7 +35,7 @@ const fieldErrors = (issueList) => {
   const error = {};
   issueList.forEach((e) => {
     const key = e.path?.[0] ?? "form";
-    if (!error[key]) error[key] = i.message;
+    if (!error[key]) error[key] = e.message;
   });
   return error;
 };

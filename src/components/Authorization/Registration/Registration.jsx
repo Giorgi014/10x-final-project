@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useAuth } from "../Context/AuthContext";
-import { Button } from "../Route";
+import { useAuth } from "../../Context/AuthContext";
+import { Button } from "../../Route";
 import { useNavigate } from "react-router-dom";
-import { useLoader } from "../Context/LoaderContext";
+import { useLoader } from "../../Context/LoaderContext";
+import "./Registration.scss"
 
 export const Registration = () => {
   const { register } = useAuth();

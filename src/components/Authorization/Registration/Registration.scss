@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
+}
+
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+.registration_container {
+  @include displayCenter(center, flex-start);
+  flex-direction: column;
+  width: 100%;
+  h2 {
+    width: 100%;
+    font-family: "Inter_medium";
+    font-size: 20px;
+    color: var(--black_text_color);
+    margin-bottom: 10px;
+  }
+  .enter_details {
+    font-family: "Inter_medium";
+    color: var(--black_text_color);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .registration_form {
+    @include displayCenter(center, center);
+    flex-direction: column;
+    width: 100%;
+    .name_container {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #1b1b1b1a;
+      margin: 16px 0px;
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #1b1b1be5;
+      }
+      label {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.5s;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        color: #1b1b1b99;
+      }
+      input:focus ~ label {
+        top: -5px;
+      }
+    }
+    .input_container {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #1b1b1b1a;
+      margin: 16px 0px;
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #1b1b1be5;
+      }
+      label {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.5s;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        color: #1b1b1b99;
+      }
+      input:focus ~ label {
+        top: -5px;
+      }
+    }
+    .password_container {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #1b1b1b1a;
+      margin: 16px 0px;
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #1b1b1be5;
+      }
+      label {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.5s;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        color: #1b1b1b99;
+      }
+      input:focus ~ label {
+        top: -5px;
+      }
+    }
+  }
+}

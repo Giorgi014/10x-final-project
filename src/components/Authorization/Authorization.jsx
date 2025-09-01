@@ -1,8 +1,8 @@
-import { LogIn } from "./LogIn";
+import { LogIn } from "./Login/LogIn";
 import { Autherizationimage } from "../RoutImages";
 import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
-import { Registration } from "./Registration";
+import { Registration } from "./Registration/Registration";
 import "./Authorization.scss";
 
 export const Authorization = ({ onClose }) => {
