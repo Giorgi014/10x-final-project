@@ -48,6 +48,9 @@
         line-height: 24px;
         letter-spacing: 0%;
         color: #1b1b1be5;
+        &::placeholder {
+          color: transparent;
+        }
       }
       label {
         position: absolute;
@@ -62,7 +65,8 @@
         letter-spacing: 0%;
         color: #1b1b1b99;
       }
-      input:focus ~ label {
+      input:focus ~ label,
+      input:not(:placeholder-shown) ~ label {
         top: -5px;
       }
       &.has_error {
@@ -91,6 +95,9 @@
         line-height: 24px;
         letter-spacing: 0%;
         color: #1b1b1be5;
+        &::placeholder {
+          color: transparent;
+        }
       }
       label {
         position: absolute;
@@ -105,8 +112,17 @@
         letter-spacing: 0%;
         color: #1b1b1b99;
       }
-      input:focus ~ label {
+      input:focus ~ label,
+      input:not(:placeholder-shown) ~ label {
         top: -5px;
+      }
+      .icon {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        font-size: 21px;
+        cursor: pointer;
+        color: #1b1b1b99;
       }
       &.has_error {
         border-bottom: 1px solid red;

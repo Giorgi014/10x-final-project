@@ -4,6 +4,7 @@ import { Button } from "../../Route";
 import { Logotext } from "../../RoutImages";
 import { useNavigate } from "react-router-dom";
 import { useLoader } from "../../Context/LoaderContext";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Login.scss";
 
 export const LogIn = () => {
@@ -12,6 +13,7 @@ export const LogIn = () => {
   const [error, setError] = useState({});
   const { setIsLoading } = useLoader();
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setValue((v) => ({ ...v, [e.target.name]: e.target.value }));
@@ -32,6 +34,10 @@ export const LogIn = () => {
     }
   };
 
+  const passwordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <article className="login_container">
       <div className="login_header">
@@ -46,6 +52,7 @@ export const LogIn = () => {
             name="email"
             className="email_input"
             id="email"
+            placeholder=" "
             value={value.email}
             onChange={handleChange}
             autoComplete="email"
@@ -57,14 +64,18 @@ export const LogIn = () => {
           className={`password_container ${error.password ? "has_error" : ""}`}
         >
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             name="password"
             className="password_input"
             id="password"
+            placeholder=" "
             value={value.password}
             onChange={handleChange}
             autoComplete="current-password"
           />
+          <div className="icon" onClick={passwordVisibility}>
+            {showPassword ? <FaEye /> : <FaEyeSlash />}
+          </div>
           <label htmlFor="password">Enter your password</label>
           {error.password && (
             <span className="field_error">{error.password}</span>
