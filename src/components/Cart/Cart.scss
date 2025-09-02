@@ -21,8 +21,9 @@
   background-color: var(--white_cart);
   border-radius: 8px;
   padding: 24px 16px;
-  .heart_icon {
-    align-self: flex-end;
+  .icons_cont {
+    @include displayCenter(space-between, center);
+    width: 100%;
     font-size: 24px;
     color: var(--gray_text);
     cursor: pointer;

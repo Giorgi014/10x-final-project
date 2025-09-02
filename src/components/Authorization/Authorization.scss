@@ -119,3 +119,17 @@
     }
   }
 }
+
+@media screen and (max-width: 700px) {
+  .authorization_container {
+    cursor: default;
+    .authorization {
+      .authorization_image{
+        display: none;
+      }
+      .login_regigration{
+        width: 100%;
+      }
+    }
+  }
+}
