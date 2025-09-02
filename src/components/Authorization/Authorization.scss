@@ -89,6 +89,7 @@
   .close_icon {
     @include displayCenter(center, center);
     position: absolute;
+    z-index: 99;
     width: 30px;
     height: 30px;
     top: 20px;
@@ -102,6 +103,19 @@
     &:hover {
       background-color: var(--black_text_color);
       color: var(--white);
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1025px) {
+  .authorization_container {
+    cursor: default;
+    .authorization {
+      width: 100%;
+      max-width: none;
+      height: 100vh;
+      max-height: none;
     }
   }
 }

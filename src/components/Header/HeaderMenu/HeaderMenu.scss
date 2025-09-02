@@ -31,7 +31,7 @@
       right: 0;
       height: 100vh;
       background-color: white;
-      z-index: 98;
+      z-index: 97;
       flex-direction: column;
       overflow: hidden;
       &.open {
@@ -58,7 +58,7 @@
 
     .menu_btn {
       display: flex;
-      z-index: 99;
+      z-index: 97;
       position: absolute;
       right: 16px;
     }
