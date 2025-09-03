@@ -4,85 +4,99 @@
       "id": 1,
       "url": "/images/Iphone14pro1.png",
       "description": "Apple iPhone 14 Pro Max 128GB Deep Purple",
-      "price": "900"
+      "price": "900",
+      "item_name": "Apple iPhone 14"
     },
     {
       "id": 2,
       "url": "/images/Iphone14pro1(1).png",
       "description": "Blackmagic Pocket Cinema Camera 6k",
-      "price": "2535"
+      "price": "2535",
+      "item_name": "Blackmagic Pocket"
     },
     {
       "id": 3,
       "url": "/images/Iphone14pro1(2).png",
       "description": "Apple Watch Series 9 GPS 41mm Starlight Aluminium",
-      "price": "399"
+      "price": "399",
+      "item_name": "Apple Watch"
     },
     {
       "id": 4,
       "url": "/images/Iphone14pro1(3).png",
       "description": "AirPods Max Silver Starlight Aluminium",
-      "price": "549"
+      "price": "549",
+      "item_name": "AirPods Max"
     },
     {
       "id": 5,
       "url": "/images/Iphone14pro1(4).png",
       "description": "Samsung Galaxy Watch6 Classic 47mm Black",
-      "price": "369"
+      "price": "369",
+      "item_name": "Samsung Galaxy"
     },
     {
       "id": 6,
       "url": "/images/Iphone14pro1(5).png",
       "description": "Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
-      "price": "1799"
+      "price": "1799",
+      "item_name": "Samsung Galaxy"
     },
     {
       "id": 7,
       "url": "/images/Iphone14pro1(6).png",
       "description": "Galaxy Buds FE Graphite",
-      "price": "99,99"
+      "price": "99,99",
+      "item_name": "Samsung Galaxy"
     },
     {
       "id": 8,
       "url": "/images/Iphone14pro1(7).png",
       "description": "Apple iPad 9 10.2 64GB Wi-Fi Silver (MK2L3) 2021",
-      "price": "398"
+      "price": "398",
+      "item_name": "Apple iPad"
     },
     {
       "id": 9,
       "url": "/images/Iphone14pro1(8).png",
       "description": "Apple iPhone 14 Pro 512GB Gold (MQ233)",
-      "price": "1437"
+      "price": "1437",
+      "item_name": "iPhon"
     },
     {
       "id": 10,
       "url": "/images/Iphone14pro1(9).png",
       "description": "Apple iPhone 14 Pro 1TB Gold (MQ2V3)",
-      "price": "1499"
+      "price": "1499",
+      "item_name": "iPhon"
     },
     {
       "id": 11,
       "url": "/images/Group1.png",
       "name": "Popular Products",
-      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
+      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+      "item_name": "iPad"
     },
     {
       "id": 12,
       "url": "/images/image64.png",
       "name": "Ipad Pro",
-      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
+      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+      "item_name": "iPad"
     },
     {
       "id": 13,
       "url": "/images/image41.png",
       "name": "Samsung Galaxy",
-      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
+      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+      "item_name": "iPad"
     },
     {
       "id": 14,
       "url": "/images/Macbook1.png",
       "name": "Macbook Pro",
-      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
+      "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+      "item_name": "iPad"
     }
   ],
   "newArrival": [1, 2, 3, 4, 5, 6, 7, 8],
