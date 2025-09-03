@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../../assets/fonts/static/Inter_18pt-Medium.ttf)
+    format("woff2");
+}
+
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.brands_container {
+  @include displayCenter(flex-start, flex-start);
+  flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+  margin: 20px 0px;
+  background-color: var(--white);
+  .brand_cont {
+    @include displayCenter(flex-start, center);
+    gap: 10px;
+    width: 100%;
+    cursor: pointer;
+    .checked {
+      cursor: pointer;
+    }
+    .brand {
+      font-family: "Inter_medium";
+      font-size: 14px;
+    }
+  }
+}

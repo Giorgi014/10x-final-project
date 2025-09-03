@@ -1,11 +1,63 @@
 @font-face {
   font-family: "Inter_medium";
-  src: url(../../../../../../assets/fonts/static/Inter_18pt-Medium.ttf)
-    format("woff2");
+  src: url(../../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
 }
 
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+}
+
+.brand_container {
+  width: 100%;
+  max-width: 256px;
+  .brand_section {
+    @include displayCenter(space-between, center);
+    border-bottom: 1px solid var(--gray_text_color);
+    padding: 12px 0px;
+    cursor: pointer;
+  }
+  .brands {
+    width: 100%;
+    max-width: 256px;
+    z-index: 2;
+    &.show {
+      display: block;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1150px) {
+  .brand_container {
+    width: 100%;
+    max-width: 200px;
+    .brands {
+      position: absolute;
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .brand_container {
+    width: 100%;
+    max-width: 200px;
+    .brands {
+      position: absolute;
+      width: 100%;
+      max-width: 200px;
+      &.show {
+        display: block;
+      }
+      &.hide {
+        display: none;
+      }
+    }
+  }
 }
