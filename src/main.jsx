@@ -19,6 +19,9 @@ const ContactUs = React.lazy(() =>
 const Blog = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.Blog }))
 );
+const BrowseCategory = React.lazy(() =>
+  import("./components/BrowseCategory/BrowseCategory.jsx")
+);
 
 const router = createBrowserRouter([
   {
@@ -29,6 +32,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <ContactUs /> },
       { path: "blog", element: <Blog /> },
+      { path: "category/:categoryName", element: <BrowseCategory /> },
     ],
   },
 ]);
