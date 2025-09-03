@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
+}
+
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
@@ -6,7 +11,28 @@
 
 .about_container {
   width: 100vw;
-  height: 100vh;
-  padding-top: 20px;
+  padding: 20px 140px;
   text-align: center;
+  .about_head {
+    font-family: "Inter_medium";
+    font-size: 32px;
+    color: var(--balck_text_color);
+  }
+  .about_company {
+    width: 100%;
+    max-width: 1920px;
+    margin: 25px 0px;
+    font-family: "Inter_medium";
+    text-align: left;
+    font-size: 16px;
+    color: var(--balck_text_color);
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1025px) {
+  .about_container {
+    padding: 20px 16px;
+  }
 }
