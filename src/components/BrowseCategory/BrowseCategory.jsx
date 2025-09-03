@@ -3,7 +3,7 @@ import { useData } from "../Context/DataContext";
 import { useParams } from "react-router-dom";
 import { Cart } from "../Cart/Cart";
 import { useLoader } from "../Context/LoaderContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./BrowseCategory.scss";
 
 const BrowseCategory = () => {
@@ -11,6 +11,10 @@ const BrowseCategory = () => {
   const { data } = useData();
   const { isLoading } = useLoader();
   const [selectedBrands, setSelectedBrands] = useState([]);
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [categoryName]);
 
   if (!data) return isLoading;
 
