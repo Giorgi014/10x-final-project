@@ -22,6 +22,25 @@ const Blog = React.lazy(() =>
 const BrowseCategory = React.lazy(() =>
   import("./components/BrowseCategory/BrowseCategory.jsx")
 );
+const BonusProgram = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.BonusProgram }))
+);
+const GiftCards = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.GiftCards }))
+);
+const Credits = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.Credits }))
+);
+const ServiceContracts = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.ServiceContracts }))
+);
+const NonCashout = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.NonCashout }))
+);
+const Payments = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.Payments }))
+);
+
 
 const router = createBrowserRouter([
   {
@@ -33,6 +52,12 @@ const router = createBrowserRouter([
       { path: "contact", element: <ContactUs /> },
       { path: "blog", element: <Blog /> },
       { path: "category/:categoryName", element: <BrowseCategory /> },
+      { path: "bonus_programs", element: <BonusProgram /> },
+      { path: "gifts", element: <GiftCards /> },
+      { path: "credits", element: <Credits /> },
+      { path: "service_contracts", element: <ServiceContracts /> },
+      { path: "non_cashout", element: <NonCashout /> },
+      { path: "payments", element: <Payments /> },
     ],
   },
 ]);

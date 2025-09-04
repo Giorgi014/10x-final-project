@@ -9,6 +9,12 @@ import Footer from "./Footer/Footer";
 import { Authorization } from "./Authorization/Authorization";
 import { Cart } from "./Cart/Cart";
 import { Button } from "./Button/Button";
+import BonusProgram from "./Services/BonusProgram/BonusProgram";
+import GiftCards from "./Services/GiftCards/GiftCards";
+import Credits from "./Services/Credits/Credits";
+import ServiceContracts from "./Services/ServiceContracts/ServiceContracts";
+import NonCashout from "./Services/NonCashout/NonCashout";
+import Payments from "./Services/Payments/Payments";
 
 // Images
 
@@ -27,4 +33,10 @@ export {
   Logo,
   Banner_img,
   Authorization,
+  BonusProgram,
+  GiftCards,
+  Credits,
+  ServiceContracts,
+  NonCashout,
+  Payments
 };
