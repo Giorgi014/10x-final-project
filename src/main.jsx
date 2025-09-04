@@ -32,7 +32,9 @@ const Credits = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.Credits }))
 );
 const ServiceContracts = React.lazy(() =>
-  import("./components/Route.jsx").then((m) => ({ default: m.ServiceContracts }))
+  import("./components/Route.jsx").then((m) => ({
+    default: m.ServiceContracts,
+  }))
 );
 const NonCashout = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.NonCashout }))
@@ -40,7 +42,24 @@ const NonCashout = React.lazy(() =>
 const Payments = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.Payments }))
 );
-
+const FindOrder = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.FindOrder }))
+);
+const DeliveryTerms = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.DeliveryTerms }))
+);
+const Exchange = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.Exchange }))
+);
+const Guarantee = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.Guarantee }))
+);
+const Questions = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.Questions }))
+);
+const Terms = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.Payments }))
+);
 
 const router = createBrowserRouter([
   {
@@ -58,6 +77,12 @@ const router = createBrowserRouter([
       { path: "service_contracts", element: <ServiceContracts /> },
       { path: "non_cashout", element: <NonCashout /> },
       { path: "payments", element: <Payments /> },
+      { path: "find_order", element: <FindOrder /> },
+      { path: "delivery_terms", element: <DeliveryTerms /> },
+      { path: "exchange", element: <Exchange /> },
+      { path: "guarantee", element: <Guarantee /> },
+      { path: "questions", element: <Questions /> },
+      { path: "terms", element: <Terms /> },
     ],
   },
 ]);

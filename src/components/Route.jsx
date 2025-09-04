@@ -15,6 +15,12 @@ import Credits from "./Services/Credits/Credits";
 import ServiceContracts from "./Services/ServiceContracts/ServiceContracts";
 import NonCashout from "./Services/NonCashout/NonCashout";
 import Payments from "./Services/Payments/Payments";
+import FindOrder from "./AssistanceBuyer/FindOrder/FindOrder";
+import DeliveryTerms from "./AssistanceBuyer/DeliveryTerms/DeliveryTerms";
+import Exchange from "./AssistanceBuyer/Exchange/Exchange";
+import Guarantee from "./AssistanceBuyer/Guarantee/Guarantee";
+import Questions from "./AssistanceBuyer/Questions/Questions";
+import Terms from "./AssistanceBuyer/Terms/Terms";
 
 // Images
 
@@ -38,5 +44,11 @@ export {
   Credits,
   ServiceContracts,
   NonCashout,
-  Payments
+  Payments,
+  FindOrder,
+  DeliveryTerms,
+  Exchange,
+  Guarantee,
+  Questions,
+  Terms,
 };
