@@ -21,6 +21,7 @@ import Exchange from "./AssistanceBuyer/Exchange/Exchange";
 import Guarantee from "./AssistanceBuyer/Guarantee/Guarantee";
 import Questions from "./AssistanceBuyer/Questions/Questions";
 import Terms from "./AssistanceBuyer/Terms/Terms";
+import User from "./User/User";
 
 // Images
 
@@ -51,4 +52,5 @@ export {
   Guarantee,
   Questions,
   Terms,
+  User
 };

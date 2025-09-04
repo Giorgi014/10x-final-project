@@ -25,9 +25,19 @@
     .checked {
       cursor: pointer;
     }
-    .brand {
-      font-family: "Inter_medium";
-      font-size: 14px;
+    .all_brand {
+      @include displayCenter(flex-start, center);
+      gap: 3px;
+      width: 100%;
+      .brand {
+        font-family: "Inter_medium";
+        font-size: 14px;
+      }
+      .brand_number {
+        font-family: "Inter_medium";
+        font-size: 14px;
+        color: var(--white_gray);
+      }
     }
   }
 }

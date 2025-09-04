@@ -7,7 +7,48 @@
       "price": "900",
       "item_name": "Apple iPhone 14",
       "category": "phones",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "Just as a book is judged by its cover, the first thing you notice when you pick up a modern smartphone is the display. Nothing surprising, because advanced technologies allow you to practically level the display frames and cutouts for the front camera and speaker, leaving no room for bold design solutions. And how good that in such realities Apple everything is fine with displays. Both critics and mass consumers always praise the quality of the picture provided by the products of the Californian brand. And last year's 6.7-inch Retina panels, which had ProMotion, caused real admiration for many."
+        },
+        {
+          "color": {
+            "black": "black",
+            "purple": "purple",
+            "red": "red",
+            "gold": "gold",
+            "white": "white"
+          }
+        },
+        {
+          "storage": {
+            "hte": "128GB",
+            "tfs": "256GB",
+            "fot": "512GB",
+            "trb": "1TB"
+          }
+        },
+        {
+          "screen": {
+            "size": "6.7",
+            "resolution": "2796x1290",
+            "type": "OLED",
+            "additionally": {
+              "dyn": "Dynamic Island",
+              "display": "Always-On display",
+              "hdr": "HDR display",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple A16 Bionic" },
+        { "cores": "6" },
+        { "mainCm": "48-12 -12 MP" },
+        { "frontCm": "12 MP" },
+        { "battery": "4323 mAh" }
+      ]
     },
     {
       "id": 2,
@@ -16,7 +57,42 @@
       "price": "2535",
       "item_name": "Blackmagic Pocket",
       "category": "cameras",
-      "brand": "black magic"
+      "brand": "black magic",
+      "details": [
+        {
+          "info": "Compact Super 35 digital cinema camera capable of 6K recording with professional codecs and high dynamic range for filmmakers."
+        },
+        {
+          "color": { "black": "black" }
+        },
+        {
+          "storage": {
+            "hte": "CFexpress/SD",
+            "tfs": "—",
+            "fot": "—",
+            "trb": "—"
+          }
+        },
+        {
+          "screen": {
+            "size": "5.0",
+            "resolution": "1920x1080",
+            "type": "LCD",
+            "additionally": {
+              "dyn": "—",
+              "display": "Touchscreen",
+              "hdr": "—",
+              "tone": "—",
+              "wclr": "—"
+            }
+          }
+        },
+        { "cpu": "Cinema imaging processor" },
+        { "cores": "—" },
+        { "mainCm": "Super 35 6K sensor" },
+        { "frontCm": "—" },
+        { "battery": "Rechargeable (NP-F style)" }
+      ]
     },
     {
       "id": 3,
@@ -25,7 +101,41 @@
       "price": "399",
       "item_name": "Apple Watch",
       "category": "smart watches",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "Smartwatch with advanced health sensors, Always‑On display and seamless iPhone integration in a compact 41mm aluminium case."
+        },
+        {
+          "color": {
+            "starlight": "starlight",
+            "midnight": "midnight",
+            "silver": "silver"
+          }
+        },
+        {
+          "storage": { "hte": "64GB", "tfs": "—", "fot": "—", "trb": "—" }
+        },
+        {
+          "screen": {
+            "size": "1.69",
+            "resolution": "430x352",
+            "type": "OLED",
+            "additionally": {
+              "dyn": "—",
+              "display": "Always-On display",
+              "hdr": "—",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple S9 SiP" },
+        { "cores": "2" },
+        { "mainCm": "—" },
+        { "frontCm": "—" },
+        { "battery": "Up to 18 hours" }
+      ]
     },
     {
       "id": 4,
@@ -34,7 +144,37 @@
       "price": "549",
       "item_name": "AirPods Max",
       "category": "headphone",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "Premium over‑ear headphones with Active Noise Cancellation, Transparency mode and spatial audio."
+        },
+        {
+          "color": { "silver": "silver", "space gray": "space gray" }
+        },
+        {
+          "storage": { "hte": "—", "tfs": "—", "fot": "—", "trb": "—" }
+        },
+        {
+          "screen": {
+            "size": "—",
+            "resolution": "—",
+            "type": "—",
+            "additionally": {
+              "dyn": "—",
+              "display": "—",
+              "hdr": "—",
+              "tone": "—",
+              "wclr": "—"
+            }
+          }
+        },
+        { "cpu": "Apple H1 (dual chips)" },
+        { "cores": "—" },
+        { "mainCm": "—" },
+        { "frontCm": "—" },
+        { "battery": "Up to 20 hours" }
+      ]
     },
     {
       "id": 5,
@@ -43,7 +183,37 @@
       "price": "369",
       "item_name": "Samsung Galaxy",
       "category": "smart watches",
-      "brand": "samsung"
+      "brand": "samsung",
+      "details": [
+        {
+          "info": "Classic rotating‑bezel smartwatch with fitness tracking, durable design and bright AMOLED display."
+        },
+        {
+          "color": { "black": "black", "silver": "silver" }
+        },
+        {
+          "storage": { "hte": "16GB", "tfs": "—", "fot": "—", "trb": "—" }
+        },
+        {
+          "screen": {
+            "size": "1.5",
+            "resolution": "480x480",
+            "type": "AMOLED",
+            "additionally": {
+              "dyn": "—",
+              "display": "Always-On display",
+              "hdr": "—",
+              "tone": "—",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Exynos W930" },
+        { "cores": "2" },
+        { "mainCm": "—" },
+        { "frontCm": "—" },
+        { "battery": "425 mAh" }
+      ]
     },
     {
       "id": 6,
@@ -52,7 +222,42 @@
       "price": "1799",
       "item_name": "Samsung Galaxy",
       "category": "phones",
-      "brand": "samsung"
+      "brand": "samsung",
+      "details": [
+        {
+          "info": "Premium foldable smartphone with large inner display for multitasking and flagship performance."
+        },
+        {
+          "color": { "black": "black", "blue": "blue", "cream": "cream" }
+        },
+        {
+          "storage": {
+            "hte": "256GB",
+            "tfs": "512GB",
+            "fot": "1TB",
+            "trb": "—"
+          }
+        },
+        {
+          "screen": {
+            "size": "7.6",
+            "resolution": "2176x1812",
+            "type": "AMOLED",
+            "additionally": {
+              "dyn": "—",
+              "display": "120Hz",
+              "hdr": "HDR10+",
+              "tone": "—",
+              "wclr": "Wide color (DCI-P3)"
+            }
+          }
+        },
+        { "cpu": "Snapdragon 8 Gen 2" },
+        { "cores": "8" },
+        { "mainCm": "50-10-12 MP" },
+        { "frontCm": "10 MP + 4 MP (UDC)" },
+        { "battery": "4400 mAh" }
+      ]
     },
     {
       "id": 7,
@@ -61,7 +266,37 @@
       "price": "99,99",
       "item_name": "Samsung Galaxy",
       "category": "headphone",
-      "brand": "samsung"
+      "brand": "samsung",
+      "details": [
+        {
+          "info": "True wireless earbuds with Active Noise Cancellation and comfortable ergonomic design."
+        },
+        {
+          "color": { "graphite": "graphite", "white": "white" }
+        },
+        {
+          "storage": { "hte": "—", "tfs": "—", "fot": "—", "trb": "—" }
+        },
+        {
+          "screen": {
+            "size": "—",
+            "resolution": "—",
+            "type": "—",
+            "additionally": {
+              "dyn": "—",
+              "display": "—",
+              "hdr": "—",
+              "tone": "—",
+              "wclr": "—"
+            }
+          }
+        },
+        { "cpu": "—" },
+        { "cores": "—" },
+        { "mainCm": "—" },
+        { "frontCm": "—" },
+        { "battery": "Up to 8.5 hours (buds)" }
+      ]
     },
     {
       "id": 8,
@@ -70,7 +305,37 @@
       "price": "398",
       "item_name": "Apple iPad",
       "category": "computer",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "10.2‑inch iPad with Retina display, powerful A‑series chip and all‑day battery life for work and play."
+        },
+        {
+          "color": { "silver": "silver", "space gray": "space gray" }
+        },
+        {
+          "storage": { "hte": "64GB", "tfs": "256GB", "fot": "—", "trb": "—" }
+        },
+        {
+          "screen": {
+            "size": "10.2",
+            "resolution": "2160x1620",
+            "type": "IPS LCD",
+            "additionally": {
+              "dyn": "—",
+              "display": "—",
+              "hdr": "—",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple A13 Bionic" },
+        { "cores": "6" },
+        { "mainCm": "8 MP" },
+        { "frontCm": "12 MP" },
+        { "battery": "All‑day battery" }
+      ]
     },
     {
       "id": 9,
@@ -79,7 +344,48 @@
       "price": "1437",
       "item_name": "iPhon",
       "category": "phones",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "Just as a book is judged by its cover, the first thing you notice when you pick up a modern smartphone is the display. Nothing surprising, because advanced technologies allow you to practically level the display frames and cutouts for the front camera and speaker, leaving no room for bold design solutions. And how good that in such realities Apple everything is fine with displays. Both critics and mass consumers always praise the quality of the picture provided by the products of the Californian brand. And last year's 6.7-inch Retina panels, which had ProMotion, caused real admiration for many."
+        },
+        {
+          "color": {
+            "black": "black",
+            "purple": "purple",
+            "red": "red",
+            "gold": "gold",
+            "white": "white"
+          }
+        },
+        {
+          "storage": {
+            "hte": "128GB",
+            "tfs": "256GB",
+            "fot": "512GB",
+            "trb": "1TB"
+          }
+        },
+        {
+          "screen": {
+            "size": "6.7",
+            "resolution": "2796x1290",
+            "type": "OLED",
+            "additionally": {
+              "dyn": "Dynamic Island",
+              "display": "Always-On display",
+              "hdr": "HDR display",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple A16 Bionic" },
+        { "cores": "6" },
+        { "mainCm": "48-12 -12 MP" },
+        { "frontCm": "12 MP" },
+        { "battery": "4323 mAh" }
+      ]
     },
     {
       "id": 10,
@@ -88,7 +394,48 @@
       "price": "1499",
       "item_name": "iPhon",
       "category": "phones",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "Just as a book is judged by its cover, the first thing you notice when you pick up a modern smartphone is the display. Nothing surprising, because advanced technologies allow you to practically level the display frames and cutouts for the front camera and speaker, leaving no room for bold design solutions. And how good that in such realities Apple everything is fine with displays. Both critics and mass consumers always praise the quality of the picture provided by the products of the Californian brand. And last year's 6.7-inch Retina panels, which had ProMotion, caused real admiration for many."
+        },
+        {
+          "color": {
+            "black": "black",
+            "purple": "purple",
+            "red": "red",
+            "gold": "gold",
+            "white": "white"
+          }
+        },
+        {
+          "storage": {
+            "hte": "128GB",
+            "tfs": "256GB",
+            "fot": "512GB",
+            "trb": "1TB"
+          }
+        },
+        {
+          "screen": {
+            "size": "6.7",
+            "resolution": "2796x1290",
+            "type": "OLED",
+            "additionally": {
+              "dyn": "Dynamic Island",
+              "display": "Always-On display",
+              "hdr": "HDR display",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple A16 Bionic" },
+        { "cores": "6" },
+        { "mainCm": "48-12 -12 MP" },
+        { "frontCm": "12 MP" },
+        { "battery": "4323 mAh" }
+      ]
     },
     {
       "id": 11,
@@ -97,7 +444,37 @@
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       "item_name": "iPad",
       "category": "computer",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "iPad with Retina display designed for everyday productivity, study and entertainment with long battery life."
+        },
+        {
+          "color": { "silver": "silver", "space gray": "space gray" }
+        },
+        {
+          "storage": { "hte": "64GB", "tfs": "256GB", "fot": "—", "trb": "—" }
+        },
+        {
+          "screen": {
+            "size": "10.2",
+            "resolution": "2160x1620",
+            "type": "IPS LCD",
+            "additionally": {
+              "dyn": "—",
+              "display": "—",
+              "hdr": "—",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple A‑series" },
+        { "cores": "6" },
+        { "mainCm": "8 MP" },
+        { "frontCm": "12 MP" },
+        { "battery": "All‑day battery" }
+      ]
     },
     {
       "id": 12,
@@ -106,7 +483,42 @@
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       "item_name": "iPad",
       "category": "computer",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "Powerful iPad Pro with ProMotion display and desktop‑class performance for creative work and multitasking."
+        },
+        {
+          "color": { "silver": "silver", "space gray": "space gray" }
+        },
+        {
+          "storage": {
+            "hte": "128GB",
+            "tfs": "256GB",
+            "fot": "512GB",
+            "trb": "1TB"
+          }
+        },
+        {
+          "screen": {
+            "size": "11.0",
+            "resolution": "2388x1668",
+            "type": "IPS LCD",
+            "additionally": {
+              "dyn": "—",
+              "display": "120Hz ProMotion",
+              "hdr": "HDR display",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple M2" },
+        { "cores": "8" },
+        { "mainCm": "12 MP" },
+        { "frontCm": "12 MP" },
+        { "battery": "All‑day battery" }
+      ]
     },
     {
       "id": 13,
@@ -115,7 +527,42 @@
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       "item_name": "iPad",
       "category": "phones",
-      "brand": "samsung"
+      "brand": "samsung",
+      "details": [
+        {
+          "info": "Modern Samsung Galaxy smartphone with vibrant AMOLED display and long‑lasting battery."
+        },
+        {
+          "color": { "black": "black", "blue": "blue", "white": "white" }
+        },
+        {
+          "storage": {
+            "hte": "128GB",
+            "tfs": "256GB",
+            "fot": "512GB",
+            "trb": "—"
+          }
+        },
+        {
+          "screen": {
+            "size": "6.5",
+            "resolution": "2400x1080",
+            "type": "AMOLED",
+            "additionally": {
+              "dyn": "—",
+              "display": "120Hz",
+              "hdr": "HDR10+",
+              "tone": "—",
+              "wclr": "Wide color (DCI-P3)"
+            }
+          }
+        },
+        { "cpu": "Octa‑core Snapdragon/Exynos" },
+        { "cores": "8" },
+        { "mainCm": "50-8-5 MP" },
+        { "frontCm": "13 MP" },
+        { "battery": "5000 mAh" }
+      ]
     },
     {
       "id": 14,
@@ -124,7 +571,37 @@
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       "item_name": "iPad",
       "category": "computer",
-      "brand": "apple"
+      "brand": "apple",
+      "details": [
+        {
+          "info": "Professional laptop with high‑brightness Liquid Retina XDR display and powerful Apple silicon for demanding workflows."
+        },
+        {
+          "color": { "space gray": "space gray", "silver": "silver" }
+        },
+        {
+          "storage": { "hte": "512GB", "tfs": "1TB", "fot": "2TB", "trb": "—" }
+        },
+        {
+          "screen": {
+            "size": "14.2",
+            "resolution": "3024x1964",
+            "type": "Mini‑LED",
+            "additionally": {
+              "dyn": "—",
+              "display": "120Hz ProMotion",
+              "hdr": "XDR",
+              "tone": "True Tone",
+              "wclr": "Wide color (P3)"
+            }
+          }
+        },
+        { "cpu": "Apple M‑series (Pro)" },
+        { "cores": "10" },
+        { "mainCm": "—" },
+        { "frontCm": "—" },
+        { "battery": "All‑day battery" }
+      ]
     }
   ],
   "newArrival": [1, 2, 3, 4, 5, 6, 7, 8],

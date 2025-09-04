@@ -58,7 +58,10 @@ const Questions = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.Questions }))
 );
 const Terms = React.lazy(() =>
-  import("./components/Route.jsx").then((m) => ({ default: m.Payments }))
+  import("./components/Route.jsx").then((m) => ({ default: m.Terms }))
+);
+const User = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.User }))
 );
 
 const router = createBrowserRouter([
@@ -83,6 +86,7 @@ const router = createBrowserRouter([
       { path: "guarantee", element: <Guarantee /> },
       { path: "questions", element: <Questions /> },
       { path: "terms", element: <Terms /> },
+      { path: "account", element: <User /> },
     ],
   },
 ]);

@@ -12,7 +12,9 @@ export const Button = ({variant = "default", children, ...props }) => {
         "btn_shop_black": variant === "shop_black",
         "btn_buy_now": variant === "buy_now",
         "btn_login": variant === "login",
-        "btn_reg": variant === "registration"
+        "btn_reg": variant === "registration",
+        "btn_fav": variant === "favorites",
+        "btn_card": variant === "card",
       }
     )}
     >

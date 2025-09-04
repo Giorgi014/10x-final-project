@@ -37,6 +37,12 @@ import Samsunggalaxy from "/images/image41.png";
 import Mackbook from "/images/Macbook1.png";
 import Autherizationimage from "/images/SideImage.png";
 import Logotext from "/images/LogoVector.png";
+import Screen from "/images/screensize.png";
+import Cpu from "/images/cpu.png";
+import Cores from "/images/core.png";
+import Main_camera from "/images/maincamera.png";
+import Front_camera from "/images/frontcamera.png";
+import Battery from "/images/battery.png";
 
 export {
   Playstation,
@@ -75,5 +81,11 @@ export {
   Samsunggalaxy,
   Mackbook,
   Autherizationimage,
-  Logotext
+  Logotext,
+  Screen,
+  Cpu,
+  Cores,
+  Main_camera,
+  Front_camera,
+  Battery,
 };

@@ -3,7 +3,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { Authorization } from "../../Route";
 import { useState } from "react";
-import { UserCart } from "./UserCart";
+import { UserCart } from "./UserCart/UserCart";
 import { useAuth } from "../../Context/AuthContext";
 import "./HeaderItems.scss";
 
