@@ -16,9 +16,10 @@
   gap: 20px;
   padding: 10px 15px;
   border-bottom: 1px solid gray;
+  text-decoration: none;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
-  &:hover{
+  &:hover {
     background-color: var(--white_bg);
   }
   .searched_img {
