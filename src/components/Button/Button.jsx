@@ -15,6 +15,7 @@ export const Button = ({variant = "default", children, ...props }) => {
         "btn_reg": variant === "registration",
         "btn_fav": variant === "favorites",
         "btn_card": variant === "card",
+        "btn_not_found": variant === "not_found",
       }
     )}
     >

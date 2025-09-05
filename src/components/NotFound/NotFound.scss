@@ -1,0 +1,30 @@
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
+}
+
+.not_found_container {
+  @include displayCenter(center, center);
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 16px;
+  p{
+    text-align: center;
+    font-family: "Inter_medium";
+    color: var(--black_text_color);
+  }
+  .not_found{
+    font-size: clamp(60px, 12vw, 115px);
+  }
+  .not_found_description{
+    margin: 40px 0px 80px 0px;
+    font-size: clamp(16px, 4vw, 24px);
+  }
+}

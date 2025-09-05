@@ -66,6 +66,9 @@ const User = React.lazy(() =>
 const ProductDetails = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.ProductDetails }))
 );
+const NotFound = React.lazy(() =>
+  import("./components/Route.jsx").then((m) => ({ default: m.NotFound }))
+);
 
 const router = createBrowserRouter([
   {
@@ -91,6 +94,7 @@ const router = createBrowserRouter([
       { path: "terms", element: <Terms /> },
       { path: "account", element: <User /> },
       { path: "/product/:id", element: <ProductDetails /> },
+      { path: "error", element: <NotFound /> },
     ],
   },
 ]);

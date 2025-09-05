@@ -2,8 +2,40 @@ import { Logo, Twitter, Facebook, Tiktok, Instagram } from "../RoutImages";
 import ServicesSection from "./ServicesSection";
 import AssistanceSection from "./AssistanceSection";
 import "./Footer.scss";
+import { useNavigate } from "react-router-dom";
+
+const media = [
+  {
+    id: 1,
+    img: Twitter,
+    path: "/error",
+    label: "Twitter",
+    className: "twitter",
+  },
+  {
+    id: 2,
+    img: Facebook,
+    path: "/error",
+    label: "Facebook",
+    className: "facebook",
+  },
+  { id: 3, img: Tiktok, path: "/error", label: "Tiktok", className: "tiktok" },
+  {
+    id: 4,
+    img: Instagram,
+    path: "/error",
+    label: "Instagram",
+    className: "instagram",
+  },
+];
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    navigate(path)
+  }
+
   return (
     <footer>
       <article className="footer_container">
@@ -18,10 +50,9 @@ const Footer = () => {
         <AssistanceSection />
       </article>
       <div className="social_media">
-        <img src={Twitter} alt="Twitter" className="twitter" />
-        <img src={Facebook} alt="Facebook" className="facebook" />
-        <img src={Tiktok} alt="Tiktok" className="tiktok" />
-        <img src={Instagram} alt="Instagram" className="instagram" />
+        {media.map(({ id, img, path, label, className }) => (
+          <img key={id} src={img} alt={label} className={className} onClick={() => handleNavigate(path)} />
+        ))}
       </div>
     </footer>
   );
