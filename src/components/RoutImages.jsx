@@ -43,6 +43,9 @@ import Cores from "/images/core.png";
 import Main_camera from "/images/maincamera.png";
 import Front_camera from "/images/frontcamera.png";
 import Battery from "/images/battery.png";
+import Delivery from "/images/delivery.png";
+import Shop from "/images/shop.png";
+import Verify from "/images/verify.png";
 
 export {
   Playstation,
@@ -88,4 +91,7 @@ export {
   Main_camera,
   Front_camera,
   Battery,
+  Delivery,
+  Shop,
+  Verify,
 };

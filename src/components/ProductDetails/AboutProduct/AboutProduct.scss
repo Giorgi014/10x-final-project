@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Inter_medium";
+  src: url(../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
+}
+
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.about_product_container {
+  @include displayCenter(space-between, center);
+  width: 100%;
+  margin: 0 auto;
+  .about_product {
+    @include displayCenter(flex-start, center);
+    width: 100%;
+    gap: 16px;
+    .img {
+      @include displayCenter(center, center);
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      background-color: var(--white_cart);
+    }
+    .cont {
+      .product_item {
+        font-family: "Inter_medium";
+        font-size: 14px;
+        color: var(--light_dark_gray);
+      }
+      .days {
+        font-family: "Inter_medium";
+        font-size: 14px;
+        color: var(--black_text_color);
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 500px) {
+  .about_product_container {
+    .about_product{
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

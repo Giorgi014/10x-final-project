@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Cart } from "../../../Cart/Cart";
 import { useData } from "../../../Context/DataContext";
+import { useLoader } from "../../../Context/LoaderContext";
 import "./Products.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +9,7 @@ import "swiper/css";
 
 const Products = () => {
   const { data } = useData();
+  const { isLoading } = useLoader();
 
   const [isNarrow, setIsNarrow] = useState(() => {
     if (typeof window === "undefined") return false;
@@ -20,7 +22,7 @@ const Products = () => {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  if (!data) return null;
+  if (!data) return isLoading;
 
   const newArrivalProducts = data.newArrival
     .map((id) => data.allImages.find((img) => img.id === id))

@@ -8,3 +8,50 @@
   justify-content: $justify;
   align-items: $align;
 }
+.item_detail_container{
+  width: 100%;
+  margin: 0px 0px 24px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  row-gap: 16px;
+  .item_detail{
+    @include displayCenter(flex-start, center);
+    gap: 8px;
+    width: 168px;
+    height: 46px;
+    padding: 16px 8px;
+    border-radius: 5px;
+    background-color: var(--whiter_gray);
+    img{
+      width: 24px;
+      height: 24px;
+    }
+    .details{
+      .name_item{
+        font-size: 14px;
+        color: var(--bolder_gray_text);
+      }
+      .detail{
+        font-size: 14px;
+        color: var(--bolder_gray);
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 550px) {
+  .item_detail_container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .item_detail_container {
+     .item_detail{
+      width: 100%;
+     }
+  }
+}

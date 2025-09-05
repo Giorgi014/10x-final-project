@@ -8,3 +8,24 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+.storage_container {
+  @include displayCenter(space-between, center);
+  margin: 24px 0px;
+  gap: 10px;
+  .storage {
+    @include displayCenter(center, center);
+    width: 100%;
+    max-width: 122px;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid var(--gray_text_color);
+    color: var(--gray_text_color);
+    transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+    cursor: pointer;
+    &.choosed_strg {
+      border: 1px solid black;
+      color: var(--black_text_color);
+    }
+  }
+}
