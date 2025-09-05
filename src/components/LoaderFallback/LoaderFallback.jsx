@@ -1,0 +1,17 @@
+import { useLoader } from "../Context/LoaderContext";
+import "./LoaderFallback.scss"
+
+export const LoaderFallback = () => {
+  const { isLoading } = useLoader();
+  return isLoading ? null : (
+    <div id="page">
+      <div id="container">
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="h3">loading</div>
+      </div>
+    </div>
+  );
+};

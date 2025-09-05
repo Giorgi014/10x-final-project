@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import React, { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
 import App from "./App.jsx";
@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoaderProvider } from "./components/Context/LoaderContext.jsx";
 import { DataProvider } from "./components/Context/DataContext.jsx";
 import { AuthProvider } from "./components/Context/AuthContext.jsx";
+import { LoaderFallback } from "./components/LoaderFallback/LoaderFallback.jsx";
 
 const Home = React.lazy(() =>
   import("./components/Route.jsx").then((m) => ({ default: m.Home }))
@@ -101,12 +102,14 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
-      <LoaderProvider>
+    <LoaderProvider>
+      <AuthProvider>
         <DataProvider>
-          <RouterProvider router={router} />
+          <Suspense fallback={<LoaderFallback />}>
+            <RouterProvider router={router} />
+          </Suspense>
         </DataProvider>
-      </LoaderProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </LoaderProvider>
   </StrictMode>
 );
