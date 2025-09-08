@@ -5,11 +5,13 @@ import { Authorization } from "../../Route";
 import { useState } from "react";
 import { UserCart } from "./UserCart/UserCart";
 import { useAuth } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "./HeaderItems.scss";
 
 const HeaderItems = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   const toggleUser = () => {
     setIsOpen(!isOpen);
@@ -17,6 +19,9 @@ const HeaderItems = () => {
   const handleClose = () => {
     setIsOpen(false);
   };
+  const handleNavigation = () => {
+    navigate("/shopping_cart")
+  }
 
   return (
     <div className="header_items">
@@ -24,7 +29,7 @@ const HeaderItems = () => {
         <IoIosHeartEmpty className="header_icon favorites" />
         <p className="favorite_icon icons">Favorites</p>
       </div>
-      <div className="cart_cont">
+      <div className="cart_cont" onClick={handleNavigation}>
         <IoCartOutline className="header_icon cart" />
         <p className="cart_icon icons">Cart</p>
       </div>

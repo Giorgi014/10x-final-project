@@ -143,7 +143,7 @@
       "description": "AirPods Max Silver Starlight Aluminium",
       "price": "549",
       "item_name": "AirPods Max",
-      "category": "headphone",
+      "category": "headphones",
       "brand": "apple",
       "details": [
         {
@@ -265,7 +265,7 @@
       "description": "Galaxy Buds FE Graphite",
       "price": "99,99",
       "item_name": "Samsung Galaxy",
-      "category": "headphone",
+      "category": "headphones",
       "brand": "samsung",
       "details": [
         {
@@ -304,7 +304,7 @@
       "description": "Apple iPad 9 10.2 64GB Wi-Fi Silver (MK2L3) 2021",
       "price": "398",
       "item_name": "Apple iPad",
-      "category": "computer",
+      "category": "computers",
       "brand": "apple",
       "details": [
         {
@@ -443,7 +443,7 @@
       "name": "Popular Products",
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       "item_name": "iPad",
-      "category": "computer",
+      "category": "computers",
       "brand": "apple",
       "details": [
         {
@@ -482,7 +482,7 @@
       "name": "Ipad Pro",
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       "item_name": "iPad",
-      "category": "computer",
+      "category": "computers",
       "brand": "apple",
       "details": [
         {
@@ -570,7 +570,7 @@
       "name": "Macbook Pro",
       "description": "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       "item_name": "iPad",
-      "category": "computer",
+      "category": "computers",
       "brand": "apple",
       "details": [
         {

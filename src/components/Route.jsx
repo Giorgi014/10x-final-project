@@ -24,6 +24,7 @@ import Terms from "./AssistanceBuyer/Terms/Terms";
 import User from "./User/User";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import NotFound from "./NotFound/NotFound";
+import ShoppingCart from "./ShoppingCart/ShoppingCart";
 
 // Images
 
@@ -56,5 +57,6 @@ export {
   Terms,
   User,
   ProductDetails,
-  NotFound
+  NotFound,
+  ShoppingCart
 };
