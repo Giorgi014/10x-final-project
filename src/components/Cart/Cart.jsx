@@ -3,11 +3,16 @@ import { IoCartOutline } from "react-icons/io5";
 import { Button } from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 import { useData } from "../Context/DataContext";
+import { useState } from "react";
+import { AuthRequired } from "../Authorization/AuthRequired/AuthRequired";
+import { Authorization } from "../Route";
 import "./Cart.scss";
 
 export const Cart = ({ id, url, description, price }) => {
   const navigate = useNavigate();
-  const { addToCart, cartItems, removeFromCart } = useData();
+  const { addToCart, cartItems, removeFromCart, isAuthenticated } = useData();
+  const [showAuthRequired, setShowAuthRequired] = useState(false);
+  const [showAuthorization, setShowAuthorization] = useState(false);
 
   const handleNavigate = () => {
     navigate(`/product/${id}`);
@@ -16,12 +21,21 @@ export const Cart = ({ id, url, description, price }) => {
   const isInCart = cartItems.some((item) => item.id === id);
 
   const handleAddToCart = () => {
+    if (!isAuthenticated) {
+      setShowAuthRequired(true);
+      return;
+    }
+
     if (isInCart) {
       removeFromCart(id);
     } else {
       addToCart({ id, url, description, price });
     }
   };
+
+  const closeAuthRequired = () => setShowAuthRequired(false);
+  const openAuthorization = () => setShowAuthorization(true);
+  const closeAuthorization = () => setShowAuthorization(false);
 
   return (
     <div key={id} className="product_card" title={description}>
@@ -40,6 +54,13 @@ export const Cart = ({ id, url, description, price }) => {
       <Button variant="buy_now" onClick={handleNavigate}>
         <span>Buy Now</span>
       </Button>
+      {showAuthRequired && (
+        <AuthRequired
+          onClose={closeAuthRequired}
+          onOpenAuth={openAuthorization}
+        />
+      )}
+      {showAuthorization && <Authorization onClose={closeAuthorization} />}
     </div>
   );
 };

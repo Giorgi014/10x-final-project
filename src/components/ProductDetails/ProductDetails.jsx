@@ -3,17 +3,20 @@ import { ItemImage } from "./ItemImage/ItemImage";
 import { Storage } from "./Storage/Storage";
 import { ItemDetail } from "./ItemDetail/ItemDetail";
 import { Button } from "../Button/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { AboutProduct } from "./AboutProduct/AboutProduct";
 import { useParams } from "react-router-dom";
 import { useData } from "../Context/DataContext";
 import { useLoader } from "../Context/LoaderContext";
+import { Authorization, AuthRequired } from "../Route";
 import "./ProductDetails.scss";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { data, addToCart, cartItems } = useData();
+  const { data, addToCart, cartItems, isAuthenticated } = useData();
   const { isLoading } = useLoader();
+  const [showAuthRequired, setShowAuthRequired] = useState(false);
+  const [showAuthorization, setShowAuthorization] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,10 +41,18 @@ const ProductDetails = () => {
   const battery = product.details.find((d) => d.battery)?.battery || "";
 
   const handleAddToCart = () => {
+    if (!isAuthenticated) {
+      setShowAuthRequired(true);
+      return;
+    }
     addToCart(product);
   };
 
-   const isInCart = cartItems.some((item) => item.id === product.id);
+  const isInCart = cartItems.some((item) => item.id === product.id);
+
+  const closeAuthRequired = () => setShowAuthRequired(false);
+  const openAuthorization = () => setShowAuthorization(true);
+  const closeAuthorization = () => setShowAuthorization(false);
 
   return (
     <article className="product_details_container">
@@ -87,6 +98,13 @@ const ProductDetails = () => {
           <AboutProduct />
         </div>
       </section>
+      {showAuthRequired && (
+        <AuthRequired
+          onClose={closeAuthRequired}
+          onOpenAuth={openAuthorization}
+        />
+      )}
+      {showAuthorization && <Authorization onClose={closeAuthorization} />}
     </article>
   );
 };
