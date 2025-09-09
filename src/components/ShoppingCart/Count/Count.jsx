@@ -1,20 +1,22 @@
-import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import "./Count.scss";
 
-const Count = () => {
-  const [count, setCount] = useState(1);
-
+const Count = ({ quantity, onChangeQuantity }) => {
   const addItem = () => {
-    setCount((plus) => plus + 1);
+    onChangeQuantity(quantity + 1);
   };
+
   const removeItem = () => {
-    if (count > 1) {
-      setCount((minus) => minus - 1);
+    if (quantity > 1) {
+      onChangeQuantity(quantity - 1);
     }
   };
+
   const handleItemNumber = (value) => {
-    setBetAmount(parseFloat(value));
+    const number = parseInt(value);
+    if (!isNaN(number) && number > 0) {
+      onChangeQuantity(number);
+    }
   };
 
   return (
@@ -25,7 +27,7 @@ const Count = () => {
       <input
         type="text"
         className="count"
-        value={count}
+        value={quantity}
         onChange={(e) => handleItemNumber(e.target.value)}
       />
       <button className="plus" onClick={addItem}>

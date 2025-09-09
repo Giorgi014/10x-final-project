@@ -22,13 +22,33 @@
   max-width: 1920px;
   padding: 112px 160px;
   margin: 0 auto;
+  .empty_shopping_cart{
+    font-family: "Inter_semibold";
+    font-size: 24px;
+    color: var(--black_text_color);
+    text-align: center;
+  }
+  .empty_cart_message{
+    font-family: "Inter_semibold";
+    font-size: 24px;
+    color: var(--black_text_color);
+    text-align: center;
+    margin-top: 50px;
+    p{
+      margin: 20px 0px;
+    }
+    .start_shoping{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
   .shopping_cart_title {
     font-family: "Inter_semibold";
     font-size: 24px;
     color: var(--black_text_color);
   }
   .shopping {
-    @include displayCenter(space-between, center);
+    @include displayCenter(space-between, flex-start);
     gap: 48px;
     .order_summary_cont {
       width: 100%;

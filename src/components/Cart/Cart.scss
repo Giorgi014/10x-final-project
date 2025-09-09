@@ -27,6 +27,11 @@
     font-size: 24px;
     color: var(--gray_text);
     cursor: pointer;
+    .cart_icon{
+      &.in_cart{
+        color: rgb(255, 217, 0);
+      }
+    }
   }
   .product {
     @include displayCenter(space-evenly, center);
