@@ -25,6 +25,7 @@ import User from "./User/User";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import NotFound from "./NotFound/NotFound";
 import ShoppingCart from "./ShoppingCart/ShoppingCart";
+import { AuthRequired } from "./Authorization/AuthRequired/AuthRequired";
 
 // Images
 
@@ -58,5 +59,6 @@ export {
   User,
   ProductDetails,
   NotFound,
-  ShoppingCart
+  ShoppingCart,
+  AuthRequired
 };

@@ -2,9 +2,133 @@
   font-family: "Inter_medium";
   src: url(../../assets/fonts/static/Inter_18pt-Medium.ttf) format("woff2");
 }
+@font-face {
+  font-family: "Inter_bold";
+  src: url(../../assets/fonts/static/Inter_18pt-Bold.ttf) format("woff2");
+}
+@font-face {
+  font-family: "Inter_regular";
+  src: url(../../assets/fonts/static/Inter_18pt-Regular.ttf) format("woff2");
+}
 
 @mixin displayCenter($justify, $align) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+}
+
+.shopping_cart_container {
+  width: 100%;
+  max-width: 1920px;
+  padding: 112px 160px;
+  margin: 0 auto;
+  .shopping_cart_title {
+    font-family: "Inter_semibold";
+    font-size: 24px;
+    color: var(--black_text_color);
+  }
+  .shopping {
+    @include displayCenter(space-between, center);
+    gap: 48px;
+    .order_summary_cont {
+      width: 100%;
+      max-width: 536px;
+      padding: 56px 64px;
+      border: 1px solid var(--white_gray);
+      border-radius: 8px;
+      .order_summary_text {
+        font-family: "Inter_bold";
+        font-size: 20px;
+        width: 100%;
+        max-width: 408px;
+        margin-bottom: 40px;
+      }
+      .subtotal_container {
+        width: 100%;
+        max-width: 408px;
+        .subtotal_cont {
+          @include displayCenter(space-between, center);
+          width: 100%;
+          color: var(--black_text_color);
+          font-size: 16px;
+          margin-bottom: 16px;
+          font-family: "Inter_medium";
+        }
+        .estimated_cont {
+          @include displayCenter(space-between, center);
+          width: 100%;
+          margin-bottom: 8px;
+          font-size: 16px;
+          .estimated_tax {
+            font-family: "Inter_regular";
+            color: #545454;
+          }
+          .estimated_tax_price {
+            color: var(--black_text_color);
+            font-family: "Inter_medium";
+          }
+        }
+        .shipping_cont {
+          @include displayCenter(space-between, center);
+          width: 100%;
+          font-size: 16px;
+          .shipping_tax {
+            color: #545454;
+            font-family: "Inter_regular";
+          }
+          .shipping_tax_price {
+            color: var(--black_text_color);
+            font-family: "Inter_medium";
+          }
+        }
+        .total_price_cont {
+          @include displayCenter(space-between, center);
+          width: 100%;
+          font-size: 16px;
+          color: var(--black_text_color);
+          font-family: "Inter_medium";
+          margin: 16px 0px 48px 0px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1310px) {
+  .shopping_cart_container {
+    .shopping {
+      gap: 16px;
+      .order_summary_cont {
+        padding: 56px 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .shopping_cart_container {
+    padding: 56px 50px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .shopping_cart_container {
+    padding: 56px 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shopping_cart_container {
+    .shopping_cart_title{
+      text-align: center
+    }
+    .shopping {
+      @include displayCenter(flex-start, center);
+      flex-direction: column;
+      .order_summary_cont {
+        margin-top: 40px;
+      }
+    }
+  }
 }

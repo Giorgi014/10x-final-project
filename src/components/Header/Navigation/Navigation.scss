@@ -26,6 +26,7 @@
         font-family: "Inter_medium";
         cursor: pointer;
         transition: color 0.2s ease-in-out;
+        white-space: nowrap;
         &:hover {
           color: var(--black_text_color);
         }

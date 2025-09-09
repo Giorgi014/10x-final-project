@@ -18,7 +18,7 @@ const emailSchema = z
 
 const passwordSchema = z
   .string()
-  .min(4, "Password must be at least 4 characters");
+  .min(6, "Password must be at least 6 characters");
 
 const loginSchema = z.object({
   email: emailSchema,

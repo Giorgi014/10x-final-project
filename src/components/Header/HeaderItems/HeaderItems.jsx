@@ -1,7 +1,7 @@
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
-import { Authorization } from "../../Route";
+import { Authorization, AuthRequired } from "../../Route";
 import { useState } from "react";
 import { UserCart } from "./UserCart/UserCart";
 import { useAuth } from "../../Context/AuthContext";
@@ -12,6 +12,8 @@ const HeaderItems = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useAuth();
   const navigate = useNavigate();
+  const [showAuthRequired, setShowAuthRequired] = useState(false);
+  const [showAuthorization, setShowAuthorization] = useState(false);
 
   const toggleUser = () => {
     setIsOpen(!isOpen);
@@ -20,8 +22,17 @@ const HeaderItems = () => {
     setIsOpen(false);
   };
   const handleNavigation = () => {
-    navigate("/shopping_cart")
-  }
+    if (!user) {
+      setShowAuthRequired(true);
+      return;
+    } else {
+      navigate("/shopping_cart");
+    }
+  };
+
+  const closeAuthRequired = () => setShowAuthRequired(false);
+  const openAuthorization = () => setShowAuthorization(true);
+  const closeAuthorization = () => setShowAuthorization(false);
 
   return (
     <div className="header_items">
@@ -43,6 +54,13 @@ const HeaderItems = () => {
             <Authorization onClose={handleClose} />
           ))}
       </div>
+      {showAuthRequired && (
+        <AuthRequired
+          onClose={closeAuthRequired}
+          onOpenAuth={openAuthorization}
+        />
+      )}
+      {showAuthorization && <Authorization onClose={closeAuthorization} />}
     </div>
   );
 };
