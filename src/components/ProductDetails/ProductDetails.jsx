@@ -12,7 +12,7 @@ import "./ProductDetails.scss";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { data } = useData();
+  const { data, addToCart, cartItems } = useData();
   const { isLoading } = useLoader();
 
   useEffect(() => {
@@ -36,6 +36,12 @@ const ProductDetails = () => {
   const mainCm = product.details.find((d) => d.mainCm)?.mainCm || "";
   const frontCm = product.details.find((d) => d.frontCm)?.frontCm || "";
   const battery = product.details.find((d) => d.battery)?.battery || "";
+
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
+
+   const isInCart = cartItems.some((item) => item.id === product.id);
 
   return (
     <article className="product_details_container">
@@ -73,8 +79,8 @@ const ProductDetails = () => {
             <Button variant="favorites">
               <span>Add to Wishlist</span>
             </Button>
-            <Button variant="card">
-              <span>Add to Cart</span>
+            <Button variant="card" onClick={handleAddToCart}>
+              <span>{isInCart ? "In Cart" : "Add to Cart"}</span>
             </Button>
           </div>
 
