@@ -8,13 +8,15 @@ import { AboutProduct } from "./AboutProduct/AboutProduct";
 import { useParams } from "react-router-dom";
 import { useData } from "../Context/DataContext";
 import { useLoader } from "../Context/LoaderContext";
+import { useAuth } from "../Context/AuthContext";
 import { Authorization, AuthRequired } from "../Route";
 import "./ProductDetails.scss";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { data, addToCart, cartItems, isAuthenticated } = useData();
+  const { data, addToCart, cartItems, removeFromCart } = useData();
   const { isLoading } = useLoader();
+  const { user } = useAuth();
   const [showAuthRequired, setShowAuthRequired] = useState(false);
   const [showAuthorization, setShowAuthorization] = useState(false);
 
@@ -40,15 +42,20 @@ const ProductDetails = () => {
   const frontCm = product.details.find((d) => d.frontCm)?.frontCm || "";
   const battery = product.details.find((d) => d.battery)?.battery || "";
 
+ const isInCart = cartItems.some((item) => item.id === product.id);
+
   const handleAddToCart = () => {
-    if (!isAuthenticated) {
+    if (!user) {
       setShowAuthRequired(true);
       return;
     }
-    addToCart(product);
-  };
 
-  const isInCart = cartItems.some((item) => item.id === product.id);
+    if (isInCart) {
+      removeFromCart(product.id);
+    } else {
+      addToCart(product);
+    }
+  };
 
   const closeAuthRequired = () => setShowAuthRequired(false);
   const openAuthorization = () => setShowAuthorization(true);

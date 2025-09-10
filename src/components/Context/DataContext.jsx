@@ -3,7 +3,6 @@ const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const [cartItems, setCartItems] = useState(() => {
     const storedCart = localStorage.getItem("cartItems");
@@ -46,8 +45,6 @@ export const DataProvider = ({ children }) => {
         setCartItems,
         addToCart,
         removeFromCart,
-        isAuthenticated,
-        setIsAuthenticated,
       }}
     >
       {children}

@@ -6,11 +6,13 @@ import { useData } from "../Context/DataContext";
 import { useState } from "react";
 import { AuthRequired } from "../Authorization/AuthRequired/AuthRequired";
 import { Authorization } from "../Route";
+import { useAuth } from "../Context/AuthContext";
 import "./Cart.scss";
 
 export const Cart = ({ id, url, description, price }) => {
   const navigate = useNavigate();
-  const { addToCart, cartItems, removeFromCart, isAuthenticated } = useData();
+  const { addToCart, cartItems, removeFromCart } = useData();
+  const { user } = useAuth();
   const [showAuthRequired, setShowAuthRequired] = useState(false);
   const [showAuthorization, setShowAuthorization] = useState(false);
 
@@ -21,7 +23,7 @@ export const Cart = ({ id, url, description, price }) => {
   const isInCart = cartItems.some((item) => item.id === id);
 
   const handleAddToCart = () => {
-    if (!isAuthenticated) {
+    if (!user) {
       setShowAuthRequired(true);
       return;
     }
